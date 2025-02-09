@@ -10,7 +10,7 @@ int main()
 	b = a;
 	
 	std::cout << b << std::endl;
-
+	std::cout << a << std::endl;
 
 	return 0;
 }
