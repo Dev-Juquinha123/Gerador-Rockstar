@@ -8,7 +8,9 @@ int main()
 	b = 2;
 	a = c;
 	b = a;
-	
+
+	a = b;
+
 	std::cout << b << std::endl;
 	std::cout << a << std::endl;
 
