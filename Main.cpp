@@ -1,15 +1,32 @@
 # include <iostream>
 using namespace std;
 
+float calcular(float number1, float number2);
+
 int main(int argc, char** argv)
 {
-	cout << left; cout.width(20); cout << "Produto";  cout << right; cout.width(6); cout << "Quant"; cout.width(8); cout << "Valor" << endl;
-	cout << left; cout.width(20); cout << "-------";  cout << right; cout.width(6); cout << "-----"; cout.width(10); cout << "-----" << endl;
-	cout << left; cout.width(20); cout << "Abacaxi";  cout << right; cout.width(6); cout << "2.5";   cout.width(10); cout << "1.99" << endl;
-	cout << left; cout.width(10); cout << "Cenoura";  cout << right; cout.width(6); cout << "4.6";   cout.width(10); cout << "5.90" << endl;
-	cout << left; cout.width(10); cout << "Limao";    cout << right; cout.width(6); cout << "20.5";  cout.width(8); cout << "10.40" << endl;
-	cout << left; cout.width(10); cout << "Maca";     cout << right; cout.width(6); cout << "345.0"; cout.width(8); cout << "120.30" << endl;
-	cout << left; cout.width(20); cout << "Goiaba";   cout << right; cout.width(6); cout << "20.5";  cout.width(10); cout << "56.00" << endl;
+	float n1;
+	float n2;
+	float result;
+
+	std::cout << "Entre com um numero: ";
+	std::cin >> n1;
+
+	std::cout << "Entre com outro numero: ";
+	std::cin >> n2;
+
+	result = calcular(n1, n2);
+
+	std::cout << "A media harmonica de dois numeros " << n1 << " e " << n2 << " e igual a " << result << std::endl;
 
 	return 0;
+}
+
+float calcular(float number1, float number2)
+{
+	float result;
+
+	result = 2.0 * number1 * number2 / (number1 + number2);
+
+	return result;
 }
