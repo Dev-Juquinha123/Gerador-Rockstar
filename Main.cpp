@@ -18,14 +18,14 @@ int main() {
 
     }
     else {
-        std::cout << numbertest << " Nao Cabe em 16 bits" << std::endl;
+        std::cout << numbertest << " Nao Cabe em 16 bits\a" << std::endl;
     }
 
     if (isInt(numbertest)) {
         std::cout << numbertest << " Cabe em 32 bits" << std::endl;
     }
     else {
-        std::cout << numbertest << " Nao Cabe em 32 bits" << std::endl;
+        std::cout << numbertest << " Nao Cabe em 32 bits\a" << std::endl;
     }
     
     
