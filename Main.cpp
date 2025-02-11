@@ -1,32 +1,60 @@
-# include <iostream>
-using namespace std;
+#include <iostream>
+#include <climits>
+#include <limits.h>
 
-float calcular(float number1, float number2);
 
-int main(int argc, char** argv)
-{
-	float n1;
-	float n2;
-	float result;
+bool isShort(int);
+bool isInt(int);
 
-	std::cout << "Entre com um numero: ";
-	std::cin >> n1;
+int main() {
+    int numbertest;
+    std::cout << "Digite um valor inteiro: ";
+    std::cin >> numbertest;
 
-	std::cout << "Entre com outro numero: ";
-	std::cin >> n2;
 
-	result = calcular(n1, n2);
+    if (isShort(numbertest))
+    {
+        std::cout << numbertest << " Cabe em 16 bits" << std::endl;
 
-	std::cout << "A media harmonica de dois numeros " << n1 << " e " << n2 << " e igual a " << result << std::endl;
+    }
+    else {
+        std::cout << numbertest << " Nao Cabe em 16 bits" << std::endl;
+    }
 
-	return 0;
+    if (isInt(numbertest)) {
+        std::cout << numbertest << " Cabe em 32 bits" << std::endl;
+    }
+    else {
+        std::cout << numbertest << " Nao Cabe em 32 bits" << std::endl;
+    }
+    
+    
+    return 0;
 }
 
-float calcular(float number1, float number2)
+bool isInt(int number1)
 {
-	float result;
+    if (number1 > INT_MIN && number1 < INT_MAX){
+        return true;
+    }
+    else {
+        return false;
+    }
+        
+   
 
-	result = 2.0 * number1 * number2 / (number1 + number2);
+}
 
-	return result;
+bool isShort(int number)
+{
+
+    if (number > SHRT_MIN && number < SHRT_MAX){
+        return true;
+    }
+    else {
+        return false;
+    }
+
+    
+
 }
