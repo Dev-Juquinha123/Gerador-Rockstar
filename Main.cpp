@@ -1,27 +1,11 @@
 #include <iostream>
 
-char charada(char value, int numericoancii);
+
 
 int main() {
   
-    int numerocaracter;
-    char receive;
-    char newvarible;
-
-    std::cout << "Digite um ch: ";
-    std::cin >> receive;
-    std::cout << "Distancia de: ";
-    std::cin >> numerocaracter;
-
-    newvarible = charada(receive, numerocaracter);
-    std::cout << "Seu numero na tabela ascii 5 a frente e: " << newvarible << std::endl;
+    std::cout << "Maça = \t\t 20 Unidades" << std::endl;
+    std::cout << "Melancia = \t 50 Unidades" << std::endl;
+    std::cout << "Ameixa = \t 30 Unidades" << std::endl;
     return 0;
-}
-
-char charada(char caracter , int codigonumerico)
-{
-    // Calcular distancia
-    int novaposicao;
-    novaposicao = codigonumerico + caracter;
-    return novaposicao;
 }
