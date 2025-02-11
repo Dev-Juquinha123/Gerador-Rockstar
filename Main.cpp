@@ -7,14 +7,24 @@ char decodificar(char othercharacter);
 int main() {
     char valueuser;
     char showcharacter;
+    int choice;
 
     std::cout << "Digite um caractere: ";
     std::cin >> valueuser;
     std::cout << "Carectere escolhido: " << valueuser << std::endl;
-    showcharacter = codificar(valueuser);
-    std::cout << "New value " << showcharacter << std::endl;
-    showcharacter = decodificar(valueuser);
-    std::cout << "New value decompiled " << showcharacter << std::endl;
+    std::cout << "Voce deseja codificar ou Decodificar? 0/1 >> ";
+    std::cin >> choice;
+    if (choice == true)
+    {
+        showcharacter = codificar(valueuser);
+        std::cout << "New value " << showcharacter << std::endl;
+    }
+    else
+    {
+        showcharacter = decodificar(valueuser);
+        std::cout << "New value decompiled " << showcharacter << std::endl;
+    }
+    
 
     return 0;
 }
