@@ -1,2 +1,2 @@
 Hello bro!.
-Priviet brat
+Priviet brat!
