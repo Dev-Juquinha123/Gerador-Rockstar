@@ -1,21 +1,17 @@
 #include <iostream>
-
+#include<iomanip>
 
 int main() {
 
-    double x1;
-    double x2;
-    int newvalue;
-
-    std::cout << "Digite valor para x1: ";
-    std::cin >> x1;
-    std::cout << std::endl;
-    std::cout << "Digite valor para x2: ";
-    std::cin >> x2;
-    newvalue = (int)x1 + (int)x2;
-    std::cout << "A adicao inteira dos valores e " << newvalue;
-
-
+    float number;
+    std::cout << "Digite um numero float: ";
+    std::cin >> number;
+    std::cout << "Notacao padrao: " << number << std::endl;
+    std::cout << std::fixed;
+    std::cout.precision(2);
+    std::cout << "Notacao decimal: " << number << std::endl;
+    std::cout << std::scientific;
+    std::cout << "Notacao cientifico: " << number << std::endl;
     return 0;
 }
 
