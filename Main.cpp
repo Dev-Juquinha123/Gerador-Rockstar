@@ -1,15 +1,20 @@
 #include <iostream>
+using namespace std;
 
-int main() {
+int soma(int vet[]);
 
-    double vzlsf = 245.795;
-    double receiveint = (int)vzlsf;
-    
-    receiveint = receiveint * 100;
-    vzlsf = vzlsf * 100;
-    std::cout << "New value: " << receiveint << std::endl;
-    std::cout << "New value2: " << vzlsf << std::endl;
+int main()
+{
+	cout << "Digite cinco valores: ";
+	int val[5];
+	cin >> val[0] >> val[1] >> val[2] >> val[3] >> val[4];
 
-    return 0;
+	cout << "A soma do vetor e " << soma(val) << "." << endl;
+
+	return 0;
 }
 
+int soma(int vet[])
+{
+	return vet[0] + vet[1] + vet[2] + vet[3] + vet[4];
+}
