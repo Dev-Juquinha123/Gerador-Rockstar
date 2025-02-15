@@ -1,22 +1,14 @@
 #include <iostream>
 
-char ultimo(char texto[]);
 
 int main()
 {
-	std::cout << "Digite uma palavra: ";
-	char palavra[20];
-	std::cin >> palavra;
 
-	std::cout << "Em " << palavra << " a ultima letra e " << ultimo(palavra) << "." << std::endl;
+	char name[] = "Marcoasdasdasdawdasd4fasdfs";
+	char othername[] = { 'a', 'b', 'c', 'd', 'e' }; // nao tem \0 mostra lixo ate encontrar outro
+	
+	std::cout << name << std::endl;
+	std::cout << othername << std::endl;
 
 	return 0;
-}
-
-char ultimo(char texto[])
-{
-	// posição da última letra
-	int pos = strlen(texto) - 1;
-
-	return texto[pos];
 }
