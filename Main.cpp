@@ -1,20 +1,11 @@
 #include <iostream>
-using namespace std;
 
-int soma(double vet[]);
+int main() {
+    int vet[5] = { 10, 20, 30, 40, 50 };
 
-int main()
-{
-	cout << "Digite 3 valores double: ";
-	double val[3];
-	std::cin >> val[0] >> val[1] >> val[2] ;
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Elemento " << i << ": " << vet[i] << std::endl;
+    }
 
-	cout << "A soma do vetor e " << soma(val) << "." << endl;
-	
-	return 0;
-}
-
-int soma(double vet[])
-{
-	return vet[0] * vet[2] - vet[1];
+    return 0;
 }
