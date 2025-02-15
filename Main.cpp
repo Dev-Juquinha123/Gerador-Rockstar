@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main() {
-    char name[20];
-    char lastname[20];
+    const int tam = 15;
+    char name[tam];
+    char lastname[tam];
     std::cout << "Primeiro nome? ";
     std::cin >> name;
-    std::cout << std::endl;
     std::cout << "Segundo nome? ";
     std::cin >> lastname;
     std::cout << std::endl;
