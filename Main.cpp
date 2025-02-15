@@ -1,14 +1,24 @@
 #include <iostream>
-
+#include <string>
 
 int main()
 {
 
-	char name[] = "Marcoasdasdasdawdasd4fasdfs";
-	char othername[] = { 'a', 'b', 'c', 'd', 'e' }; // nao tem \0 mostra lixo ate encontrar outro
+	const char senha[] = {'c', 'm', '1', '2', '3', '\0'};
+	char tryesenha[10];
+
+	std::cout << "Digite a senha: ";
+	std::cin >> tryesenha;
+
+
+	if (strcmp(tryesenha, senha) == 0)
+	{
+		std::cout << "Senha Correta";
+	}
+	else
+		std::cout << "Senha incorreta";
+
 	
-	std::cout << name << std::endl;
-	std::cout << othername << std::endl;
 
 	return 0;
 }
