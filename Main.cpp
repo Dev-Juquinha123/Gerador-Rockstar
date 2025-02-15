@@ -1,9 +1,22 @@
 #include <iostream>
-#include <cstring>
 
-int main() {
-    char nome[] = "c++ Primer Plus";
-    std::cout << "Tamanho do vetor e: " << strlen(nome) << std::endl;
-    std::cout << "Tamanho de bityes e: " << sizeof(nome);
-    return 0;
+char ultimo(char texto[]);
+
+int main()
+{
+	std::cout << "Digite uma palavra: ";
+	char palavra[20];
+	std::cin >> palavra;
+
+	std::cout << "Em " << palavra << " a ultima letra e " << ultimo(palavra) << "." << std::endl;
+
+	return 0;
+}
+
+char ultimo(char texto[])
+{
+	// posição da última letra
+	int pos = strlen(texto) - 1;
+
+	return texto[pos];
 }
