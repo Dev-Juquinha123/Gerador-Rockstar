@@ -1,22 +1,18 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>     /* atoi */
 
 int main()
 {
 
-	const char senha[] = {'c', 'm', '1', '2', '3', '\0'};
-	char tryesenha[10];
+	char number1[10];
+	int number2;
 
-	std::cout << "Digite a senha: ";
-	std::cin >> tryesenha;
-
-
-	if (strcmp(tryesenha, senha) == 0)
-	{
-		std::cout << "Senha Correta";
-	}
-	else
-		std::cout << "Senha incorreta";
+	std::cout << "Entre com dois numeros: ";
+	std::cin >> number1;
+	std::cin >> number2;
+	int i = atoi(number1);
+	std::cout << "A Multiplicacao entre eles e " << i * number2 << std::endl;
 
 	
 
