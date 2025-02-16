@@ -13,7 +13,7 @@ int main()
 	std::cin >> number2;
 	int i = atoi(number1);
 	std::cout << "A Multiplicacao entre eles e " << i * number2 << std::endl;
-
+	std::cout << std::endl;
 	
 
 	return 0;
