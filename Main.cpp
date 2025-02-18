@@ -1,22 +1,21 @@
 #include <iostream>
-#include <string>
-#include <stdlib.h>
+
+struct jogador
+{
+	char nome[20];
+	float salario;
+	unsigned gols;
+};
 
 int main()
 {
 
-	char number1[10];
-	int number2;
-	std::cout << "-------------------------" << std::endl;
-	std::cout << "Entre com dois numeros: ";
-	std::cin >> number1;
-	std::cin >> number2;
-	int i = atoi(number1);
-	std::cout << "A Multiplicacao entre eles e " << i * number2 << std::endl;
-	std::cout << std::endl;
-	std::cout << "-------------------------" << std::endl;
+	jogador a = { "Ronaldo", 1000, 10 };
+	jogador b = { "Messi", 2000, 20 };
 
-
+	std::cout << "Nome: " << a.nome << std::endl;
+	std::cout << "Salario: " << a.salario << std::endl;
+	std::cout << "Gols: " << a.gols << std::endl;
 
 	return 0;
 }
