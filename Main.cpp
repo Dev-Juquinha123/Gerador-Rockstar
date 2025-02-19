@@ -25,6 +25,7 @@ void exibir(jogador j)
 	std::cout << "Nome: " << j.nome << std::endl;
 	std::cout << "Salario: " << j.salario << std::endl;
 	std::cout << "Gols: " << j.gols << std::endl;
+	std::cout << "----------------------" << std::endl;	
 }
 
 jogador ler()
