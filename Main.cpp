@@ -1,42 +1,42 @@
 #include <iostream>
+#include <cstring>
 
-struct jogador
+struct contabancaria
 {
-	char nome[40];
-	float salario;
-	unsigned gols;
+	char nomecliente[40];
+	unsigned saldo = 0;
 };
-
-void exibir(jogador);
-jogador ler();
 
 
 int main()
 {
-	std::cout << "Digite os dados do jogador: " << std::endl;
-	jogador romario = ler();
-	exibir(romario);
+	contabancaria jose;
+	std::cout << "Digite o nome da conta: ";
+	std::cin.getline(jose.nomecliente, 40);
+	std::cout << "\033[1;32mLogin bem sucedido!\033[0m" << std::endl;
+	std::cout << "Conta atual " << jose.nomecliente << " Saldo: " << jose.saldo << std::endl;
+	char escolha[5];
+    while (true) {
+        std::cout << "Deseja fazer um deposito? S/N" << std::endl;
+        std::cin >> escolha;
+        std::cout << "\033[A\033[2K";
+        if (strcmp(escolha, "s") == 0) {
+            std::cout << "Digite o valor que deseja depositar: ";
+            std::cin >> jose.saldo;
+            std::cout << "\033[A\033[2K";
+            std::cout << "Seu novo saldo apos deposito e: R$" << jose.saldo;
+            break;  // Sai do loop se a resposta for válida
+        }
+        else if (strcmp(escolha, "n") == 0) {
+            std::cout << "Conta finalizada." << std::endl;
+            break;  // Sai do loop
+        }
+        else {
+            std::cout << "\033[31mResposta invalida. Tente novamente.\033[0m" << std::endl;
+        }
+    }
+
+   
 
 	return 0;
-}
-
-void exibir(jogador j)
-{
-	std::cout << "Nome: " << j.nome << std::endl;
-	std::cout << "Salario: " << j.salario << std::endl;
-	std::cout << "Gols: " << j.gols << std::endl;
-	std::cout << "----------------------" << std::endl;	
-}
-
-jogador ler()
-{
-	jogador j;
-	std::cout << "Nome: ";
-	std::cin.getline(j.nome, 40);
-	std::cout << "Salario: ";
-	std::cin >> j.salario;
-	std::cout << "Gols: ";
-	std::cin >> j.gols;
-	std::cin.ignore();
-	return j;
 }
