@@ -12,7 +12,11 @@ union indetificador
 int main() {
     
 	indetificador id;
-	std::cout << sizeof(id) << std::endl;
+	id.ch = 'A';
+	std::cout << "id.ch = " << id.ch << std::endl;
+	id.num = 65;
+	std::cout << "id.num = " << id.num << std::endl;
+	std::cout << "id.ch = " << id.ch << std::endl;
 
 
     return 0;
