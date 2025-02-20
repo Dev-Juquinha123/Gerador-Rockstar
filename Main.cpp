@@ -2,21 +2,19 @@
 
 
 
-union indetificador
+union Charint
 {
     char ch;
-    int num;
-    double frac;
+    short num;
 };
 
 int main() {
     
-	indetificador id;
-	id.ch = 'A';
-	std::cout << "id.ch = " << id.ch << std::endl;
-	id.num = 65;
-	std::cout << "id.num = " << id.num << std::endl;
-	std::cout << "id.ch = " << id.ch << std::endl;
+    Charint val = { 0 };
+	std::cout << "Enter a character: ";
+	std::cin >> val.ch;
+    std::cout << "Valor na tabela ASCII" << std::endl;
+	std::cout << "CODIGO ASCII: " << val.num << std::endl;
 
 
     return 0;
