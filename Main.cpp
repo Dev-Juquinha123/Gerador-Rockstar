@@ -1,16 +1,32 @@
 #include <iostream>
 
 
+int Incrementar(int value);
+
+int Mais(int* ptr);
+
 int main() {
-    
-    char caracter = 'a';
+    int initialvalue;
+    int* ptr = &initialvalue;
+    std::cout << "Digite um valor;";
+    std::cin >> initialvalue;
+   
+    int newvalue = Mais(&initialvalue);
+    std::cout << "Resultado apos mais: " << newvalue << std::endl;
+    int novovalor = Incrementar(newvalue);
 
-    char *ptr = &caracter;
-
-    std::cout << *ptr << std::endl;
-    *ptr = 'b';
-    std::cout << *ptr << std::endl;
-    std::cout << &ptr << std::endl; // endereco
+    std::cout << "Resultado apos Icrementar: " << novovalor;
     return 0;
 }
 
+int Mais(int* ptr)
+{
+    *ptr = *ptr += 1;
+    return *ptr;
+}
+
+int Incrementar(int value)
+{
+    value = value += 1;
+    return value;
+};
