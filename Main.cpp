@@ -1,26 +1,27 @@
 #include <iostream>
 
-enum trave { LEsq, LDir, CantoEsq, CantoDir, Centro };
+enum mes { Jan=1, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre };
 
-union jogador
-{
-    char nome[25];
-    int numero;
-};
-
-struct gol
-{
-    jogador jog;        // identificador do jogador
-	float x, y, z;      // posicao da bola nas coordenadas
-	trave local;        // onde a bola entrou
-	float velo;         // velocidade da bola
-	float acel;         // aceleracao da bola
-};
 
 int main() {
     
-	gol estatisca[10]; // estatistica para ate 10 gols
+	mes inicio, fim;
+    
+	inicio = Febrero;
+	fim = Noviembre;
 
+	std::cout << "Digite o numero do mes atual: ";
+	int atual;
+	std::cin >> atual;
+
+	if (atual >= inicio && atual <= fim)
+	{
+		std::cout << "Voce esta em periodo de aulas.\n";
+	}
+	else
+	{
+		std::cout << "Ferias!\n";
+	}
 
     return 0;
 }
