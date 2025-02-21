@@ -2,6 +2,13 @@
 
 enum mes { Jan=1, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre };
 
+std::istream& operator>>(std::istream& is, mes& m)
+{
+	int i;
+	is >> i;
+	m = (mes)i; // converte para tipo mes
+	return is;
+}
 
 int main() {
     
@@ -11,7 +18,7 @@ int main() {
 	fim = Noviembre;
 
 	std::cout << "Digite o numero do mes atual: ";
-	int atual;
+	mes atual;
 	std::cin >> atual;
 
 	if (atual >= inicio && atual <= fim)
