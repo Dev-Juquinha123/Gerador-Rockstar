@@ -1,20 +1,29 @@
 #include <iostream>
 
 
+struct balao
+{
+    float diametro;  // diametro em metros
+    char marca[20];  // nome da marca
+    int modelo;      // numero do modelo
+};
+
 int main() {
 
-    int tam;
-    std::cout << "Digite o numero de alunos (minimo 2): ";
-    std::cin >> tam;
-    double* alunos = new double[tam];
-    std::cout << "Digite a nota de dois alunos: ";
-    // Preenchendo o vetor com dados do usuário
-    for (int i = 0; i < 2; i++) {
-        std::cout << "Digite a nota do aluno " << i + 1 << ": ";
-        std::cin >> alunos[i];
-    }
-    std::cout << "As notas digitadas foram " << alunos[0] << " e " << alunos[1];
-    delete[] alunos;
+    balao amarelo;
+
+    balao* ptr = &amarelo;
+    std::cout << "Entre com os dados: " << std::endl;
+    std::cout << "Diametro: ";
+    std::cin >> ptr->diametro;
+    std::cout << std::endl;
+    std::cout << "Marca: ";
+    std::cin >> ptr->marca;
+    std::cout << "Modelo: ";
+    std::cin >> ptr->modelo;
+    std::cout << "Conteudo diametro: " << ptr->diametro << "\n";
+    std::cout << "Conteudo marca: " << ptr->marca << "\n";
+    std::cout << "Conteudo modelo: " << ptr->modelo << "\n";
 
     return 0;
 }
