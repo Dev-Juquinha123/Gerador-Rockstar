@@ -1,33 +1,19 @@
 #include <iostream>
 
-enum mes { Jan=1, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre };
+enum mes { JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ };
 
-std::istream& operator>>(std::istream& is, mes& m)
-{
-	int i;
-	is >> i;
-	m = (mes)i; // converte para tipo mes
-	return is;
-}
 
 int main() {
     
-	mes inicio, fim;
-    
-	inicio = Febrero;
-	fim = Noviembre;
+	char meses[12][10] = 
+    {
+        "Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
+		"Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+	};
 
-	std::cout << "Digite o numero do mes atual: ";
-	mes atual;
-	std::cin >> atual;
-
-	if (atual >= inicio && atual <= fim)
+	for (mes ind = JAN; ind <= DEZ; ind = mes(ind +1))
 	{
-		std::cout << "Voce esta em periodo de aulas.\n";
-	}
-	else
-	{
-		std::cout << "Ferias!\n";
+		std::cout << meses[ind] << std::endl;
 	}
 
     return 0;
