@@ -1,17 +1,16 @@
 #include <iostream>
 
-enum mes { JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ };
+enum mes { SEG, TER, QUAR, QUINT, SEX };
 
 
 int main() {
     
-	char meses[12][10] = 
+	char meses[5][10] = 
     {
-        "Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
-		"Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        "Segunda", "Terca", "Quarta", "Quinta", "sexta",
 	};
 
-	for (mes ind = JAN; ind <= DEZ; ind = mes(ind +1))
+	for (mes ind = SEG; ind <= SEX; ind = mes(ind +1))
 	{
 		std::cout << meses[ind] << std::endl;
 	}
