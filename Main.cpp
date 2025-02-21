@@ -1,20 +1,25 @@
 #include <iostream>
 
+enum trave { LEsq, LDir, CantoEsq, CantoDir, Centro };
 
-
-union Charint
+union jogador
 {
-    char ch;
-    short num;
+    char nome[25];
+    int numero;
+};
+
+struct gol
+{
+    jogador jog;        // identificador do jogador
+	float x, y, z;      // posicao da bola nas coordenadas
+	trave local;        // onde a bola entrou
+	float velo;         // velocidade da bola
+	float acel;         // aceleracao da bola
 };
 
 int main() {
     
-    Charint val = { 0 };
-	std::cout << "Enter a character: ";
-	std::cin >> val.ch;
-    std::cout << "Valor na tabela ASCII" << std::endl;
-	std::cout << "CODIGO ASCII: " << val.num << std::endl;
+	gol estatisca[10]; // estatistica para ate 10 gols
 
 
     return 0;
