@@ -10,9 +10,8 @@ struct balao
 
 int main() {
 
-    balao amarelo;
+    balao* ptr = new balao;
 
-    balao* ptr = &amarelo;
     std::cout << "Entre com os dados: " << std::endl;
     std::cout << "Diametro: ";
     std::cin >> ptr->diametro;
@@ -24,6 +23,7 @@ int main() {
     std::cout << "Conteudo diametro: " << ptr->diametro << "\n";
     std::cout << "Conteudo marca: " << ptr->marca << "\n";
     std::cout << "Conteudo modelo: " << ptr->modelo << "\n";
+    delete ptr;
 
     return 0;
 }
