@@ -3,13 +3,14 @@
 
 int main() {
     
-    int x, * p, ** q;
-    p = &x;
-    q = &p;
-    x = 10;
-    std::cout << **q << std::endl;
+    char caracter = 'a';
 
+    char *ptr = &caracter;
 
+    std::cout << *ptr << std::endl;
+    *ptr = 'b';
+    std::cout << *ptr << std::endl;
+    std::cout << &ptr << std::endl; // endereco
     return 0;
 }
 
