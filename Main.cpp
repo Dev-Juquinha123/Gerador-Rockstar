@@ -4,10 +4,8 @@
 
 int main() {
 
-    double litros = 3.4;
-
-    double* ptr = &litros;
-    std::cout << "O valor de litros e " << *ptr << " seu address " << ptr << std::endl;
+    int* ptr = (int*)0x01;
+    std::cout << *ptr;
 
     return 0;
 }
