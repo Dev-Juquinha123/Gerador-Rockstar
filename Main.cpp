@@ -1,4 +1,5 @@
 #include <iostream>
+#include "functions.h"
 
 int main() {
 
@@ -17,7 +18,9 @@ int main() {
 
         std::cout << " [" << (*ptr)[iptr] << ", " << (*ptr)[jptr] << "]";
     }
-
+    // Arquivo .h incluso
+    std::cout << std::endl;
+    std::cout << "By " << NOME << std::endl;
 	
     return 0;
 }
