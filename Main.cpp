@@ -26,8 +26,8 @@ int main() {
 
 
     // Arquivo .h incluso
-    std::cout << std::endl;
-    std::cout << "By " << NOME << std::endl;
+    /*std::cout << std::endl;
+    std::cout << "By " << NOME << std::endl;*/
 	
     return 0;
 }
