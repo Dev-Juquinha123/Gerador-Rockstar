@@ -10,3 +10,11 @@ void Drawline(char item, int vezesdwl) {
 	}
 	std::cout << std::endl;
 }
+
+void ResumoQuestoes(Questoes *vetorP, int QuantiQuest) {
+	// Sem nome do participante
+	for (size_t p = 0; p < QuantiQuest; p++) {
+		char questaoLetraM = 'A' + p;
+		std::cout << "Questao " << questaoLetraM << std::endl;
+		std::cout << vetorP[i].ptrquest[j].inicio.hora;
+}

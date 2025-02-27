@@ -3,6 +3,8 @@
 // Prototipos de funcoes e Registros
 void Drawline(char item, int vezesdwl);
 
+void ResumoQuestoes(Questoes vetorP, int QuantiQuest);
+
 struct Horario
 {
 	int hora;
