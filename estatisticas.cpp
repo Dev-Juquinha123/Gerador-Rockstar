@@ -44,7 +44,8 @@ int main() {
 	std::cout << std::endl;
 	Drawline('*', 50);
 	Drawline('-', 10);
-
+	std::cout << "Resumo por Participante" << std::endl;
+	Drawline('-', 10);
 
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
