@@ -5,6 +5,7 @@ struct Casa
 {
 	float tamanho;
 	int moveis;
+	float preco;
 };
 
 int main() {
