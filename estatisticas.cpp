@@ -7,5 +7,7 @@ int main() {
 	Drawline('*', 50);
 	std::cout << "Concurso de Programacao" << std::endl;
 	
+
+	Drawline('*', 50);
     return 0;
 }
