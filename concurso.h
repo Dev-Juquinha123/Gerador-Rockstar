@@ -12,8 +12,8 @@ struct Horario
 struct Questoes
 {
 	int Graudificuldade;
-	int inicio;
-	int fim;
+	Horario inicio;
+	Horario fim;
 };
 
 struct Media

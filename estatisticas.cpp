@@ -20,6 +20,8 @@ int main() {
 
 	Drawline('*', 50);
 	Drawline('-', 10);
+
+	// Coletando informacoes
 	for (size_t i = 0; i < Nparticipantes; i++)
 	{
 		std::cout << "Participante[" << i+1 << "]: ";
@@ -31,16 +33,17 @@ int main() {
 			std::cout << "Questao " << questaoLetra << std::endl;
 			std::cout << "\tDificuldade: ";
 			std::cin >> vetDnP[i].ptrquest[j].Graudificuldade;
-			std::cout << "\tInicio :";
-			std::cin >> vetDnP[i].ptrquest[j].inicio;
+			std::cout << "\tInicio: ";
+			std::cin >> vetDnP[i].ptrquest[j].inicio.hora >> vetDnP[i].ptrquest[j].inicio.minuto;
 			std::cout << "\tFim: ";
-			std::cin >> vetDnP[i].ptrquest[j].fim;
+			std::cin >> vetDnP[i].ptrquest[j].fim.hora >> vetDnP[i].ptrquest[j].fim.minuto;
 		}
 
 		Drawline('-', 10);
 	}
-
-	
+	std::cout << std::endl;
+	Drawline('*', 50);
+	Drawline('-', 10);
 
 
 	// Evitar Memory leaker
