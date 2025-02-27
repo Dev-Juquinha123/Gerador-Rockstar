@@ -18,6 +18,8 @@ int main() {
 	// Vetor dinamico onde guarda
 	Questoes* vetDnQ = new Questoes[Nparticipantes];
 
+	// Evitar Memory leaker
+	delete[]vetDnQ;
 	Drawline('*', 50);
     return 0;
 }

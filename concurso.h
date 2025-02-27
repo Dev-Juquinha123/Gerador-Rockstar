@@ -18,5 +18,12 @@ struct Questoes
 
 struct Media
 {
+	float mediaGrauDificuldade;
+	float mediaTempo;
+};
 
+struct Participantes
+{
+	char nome;
+	Questoes* ptrquest;
 };
