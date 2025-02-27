@@ -11,10 +11,11 @@ void Drawline(char item, int vezesdwl) {
 	std::cout << std::endl;
 }
 
-void ResumoQuestoes(Questoes *vetorP, int QuantiQuest) {
+void ResumoQuestoes(Questoes* ptrquest, size_t Nquestoes) {
 	// Sem nome do participante
-	for (size_t p = 0; p < QuantiQuest; p++) {
+	for (size_t p = 0; p < Nquestoes; p++) {
 		char questaoLetraM = 'A' + p;
-		std::cout << "Questao " << questaoLetraM << std::endl;
-		std::cout << vetorP[i].ptrquest[j].inicio.hora;
+		std::cout << "\t" << questaoLetraM << "(" << ptrquest[p].Graudificuldade << ") " << ptrquest[p].inicio.hora << ":" << ptrquest[p].inicio.minuto << " as " << ptrquest[p].fim.hora << ":" << ptrquest[p].fim.minuto;
+		// Calculo de tempo
+	}
 }

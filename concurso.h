@@ -3,7 +3,7 @@
 // Prototipos de funcoes e Registros
 void Drawline(char item, int vezesdwl);
 
-void ResumoQuestoes(Questoes vetorP, int QuantiQuest);
+
 
 struct Horario
 {
@@ -29,3 +29,5 @@ struct Participantes
 	char nome[50];
 	Questoes* ptrquest; // Aponta para questoes (Cada participante tem)
 };
+
+void ResumoQuestoes(Questoes* ptrquest, size_t Nquestoes);

@@ -37,16 +37,21 @@ int main() {
 			std::cin >> vetDnP[i].ptrquest[j].inicio.hora >> vetDnP[i].ptrquest[j].inicio.minuto;
 			std::cout << "\tFim: ";
 			std::cin >> vetDnP[i].ptrquest[j].fim.hora >> vetDnP[i].ptrquest[j].fim.minuto;
+			
 		}
 
 		Drawline('-', 10);
 	}
+	
 	std::cout << std::endl;
 	Drawline('*', 50);
 	Drawline('-', 10);
 	std::cout << "Resumo por Participante" << std::endl;
 	Drawline('-', 10);
-
+	for (size_t i = 0; i < Nparticipantes; i++) {
+		std::cout << vetDnP[i].nome << std::endl;
+		ResumoQuestoes(vetDnP[i].ptrquest, Nquestoes);
+	}
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
 		delete[] vetDnP[i].ptrquest; // Deleta as questões do participante
