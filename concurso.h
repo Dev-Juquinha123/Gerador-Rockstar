@@ -24,6 +24,6 @@ struct Media
 
 struct Participantes
 {
-	char nome;
+	char nome[50];
 	Questoes* ptrquest;
 };

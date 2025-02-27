@@ -1,6 +1,6 @@
 // Implementacoes de funcoes definidas em concurso.h
 
-#include "concurso.h"  // Incluímos o cabeçalho
+#include "concurso.h"
 #include <iostream>
 
 void Drawline(char item, int vezesdwl) {
