@@ -15,25 +15,39 @@ int main() {
 	std::cout << "Qual o numero de questoes? ";
 	std::cin >> Nquestoes;
 
-	// Vetor dinamico de Questoes
-	Questoes* vetDnQ = new Questoes[Nquestoes];
-
 	// Vetor dinamico de Participantes
 	Participantes* vetDnP = new Participantes[Nparticipantes];
+
+	Drawline('*', 50);
 	Drawline('-', 10);
 	for (size_t i = 0; i < Nparticipantes; i++)
 	{
-		
 		std::cout << "Participante[" << i+1 << "]: ";
-		std::cin >> vetDnP->nome;
+		std::cin >> vetDnP[i].nome;
+		vetDnP[i].ptrquest = new Questoes[Nquestoes]; // Criando vetor dinâmico de questões para cada participante
+		for (size_t j = 0; j < Nquestoes; j++) {
+			char questaoLetra = 'A' + j; // Gera letras A, B, C...
+			Drawline('-', 10);
+			std::cout << "Questao " << questaoLetra << std::endl;
+			std::cout << "\tDificuldade: ";
+			std::cin >> vetDnP[i].ptrquest[j].Graudificuldade;
+			std::cout << "\tInicio :";
+			std::cin >> vetDnP[i].ptrquest[j].inicio;
+			std::cout << "\tFim: ";
+			std::cin >> vetDnP[i].ptrquest[j].fim;
+		}
+
 		Drawline('-', 10);
 	}
+
 	
 
 
 	// Evitar Memory leaker
-	/*delete[]vetDnQ;
-	delete[]vetDnP;*/
+	for (int i = 0; i < Nparticipantes; i++) {
+		delete[] vetDnP[i].ptrquest; // Deleta as questões do participante
+	}
+	delete[] vetDnP; // Deleta o vetor de participantes
 
 	Drawline('*', 50);
     return 0;

@@ -25,5 +25,5 @@ struct Media
 struct Participantes
 {
 	char nome[50];
-	Questoes* ptrquest;
+	Questoes* ptrquest; // Aponta para questoes (Cada participante tem)
 };
