@@ -97,11 +97,9 @@ int main() {
 	{
 		char questaoLetraqs = 'A' + i;
 		std::cout << "Questao " << questaoLetraqs << std::endl;
+		std::cout << "Dificuldade: (" << resultado.mediaGrauDificuldade << ") - Tempo (" << resultado.mediaTempo << " minutos)" << std::endl;
 	}
-	// Exibir os resultados
-	std::cout << "Resumo para " << vetDnP[i].nome << ": \n";
-	std::cout << "Média Dificuldade: " << resultado.mediaGrauDificuldade << "\n";
-	std::cout << "Média Tempo: " << resultado.mediaTempo << " minutos\n";
+	
 
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
