@@ -49,7 +49,7 @@ int main() {
 	std::cout << "Resumo por Participante" << std::endl;
 	Drawline('-', 10);
 	for (size_t i = 0; i < Nparticipantes; i++) {
-		std::cout << vetDnP[i].nome << std::endl;
+		std::cout << vetDnP[i].nome << ":" << std::endl;
 		ResumoQuestoes(vetDnP[i].ptrquest, Nquestoes);
 	}
 	// Evitar Memory leaker
