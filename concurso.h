@@ -30,4 +30,6 @@ struct Participantes
 	Questoes* ptrquest; // Aponta para questoes (Cada participante tem)
 };
 
-void ResumoQuestoes(Questoes* ptrquest, size_t Nquestoes);
+void ResumoParticipantes(Questoes* ptrvpart, size_t Npart);
+
+void ResumoQuestoes(Questoes* ptrvquest, size_t Nquestoes);

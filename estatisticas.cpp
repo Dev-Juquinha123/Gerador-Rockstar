@@ -50,7 +50,7 @@ int main() {
 	Drawline('-', 10);
 	for (size_t i = 0; i < Nparticipantes; i++) {
 		std::cout << vetDnP[i].nome << ":" << std::endl;
-		ResumoQuestoes(vetDnP[i].ptrquest, Nquestoes);
+		ResumoParticipantes(vetDnP[i].ptrquest, Nquestoes);
 	}
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
