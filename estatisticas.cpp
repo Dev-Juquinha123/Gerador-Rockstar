@@ -89,8 +89,19 @@ int main() {
 			std::cout << " (" << positivo << " min)" << std::endl;
 		}
 	}
-
-
+	std::cout << std::endl;
+	Drawline('-', 10);
+	std::cout << "\033[36mEstatisticas\033[0m" << std::endl;
+	Drawline('-', 10);
+	for (size_t i = 0; i < Nquestoes; i++)
+	{
+		char questaoLetraqs = 'A' + i;
+		std::cout << "Questao " << questaoLetraqs << std::endl;
+	}
+	// Exibir os resultados
+	std::cout << "Resumo para " << vetDnP[i].nome << ": \n";
+	std::cout << "Média Dificuldade: " << resultado.mediaGrauDificuldade << "\n";
+	std::cout << "Média Tempo: " << resultado.mediaTempo << " minutos\n";
 
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
