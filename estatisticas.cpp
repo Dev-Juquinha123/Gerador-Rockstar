@@ -57,17 +57,18 @@ int main() {
 	Drawline('-', 10);
 	std::cout << "\033[36mResumo por Questoes\033[0m" << std::endl;
 	Drawline('-', 10);
-	for (size_t i = 0; i < Nparticipantes; i++)
+	for (size_t i = 0; i < Nquestoes; i++)
 	{
 		int tamvet = Nquestoes; // Definição correta do tamanho do vetor
 		Media resultado = CalcularResumoQuestoes(vetDnP[i].ptrquest, tamvet, 1, 2);
 
-		for (size_t j = 0; j < Nquestoes; j++) {
-			char questaoLetra = 'A' + j; // Gera letras A, B, C...
-			std::cout << "Questao " << questaoLetra << std::endl;
-			std::cout << "\t" << questaoLetra << " (" << vetDnP[i].ptrquest[j].Graudificuldade << ") " << vetDnP[i].ptrquest[j].inicio.hora << ":" << vetDnP[i].ptrquest[j].inicio.minuto << " as " << vetDnP[i].ptrquest[j].fim.hora << ":" << vetDnP[i].ptrquest[j].fim.minuto;
+		char questaoLetra = 'A' + i;
+		std::cout << "Questao " << questaoLetra << std::endl;
+		for (size_t jers = 0; jers < Nparticipantes; jers++)
+		{
+			std::cout << "\t" << vetDnP[jers].nome << " (" << vetDnP[i].ptrquest[jers].Graudificuldade << ") " << vetDnP[i].ptrquest[jers].inicio.hora << ":" << vetDnP[i].ptrquest[jers].inicio.minuto << " as " << vetDnP[i].ptrquest[jers].fim.hora << ":" << vetDnP[i].ptrquest[jers].fim.minuto;
 			int calcmin;
-			calcmin = vetDnP[i].ptrquest[j].inicio.minuto - vetDnP[i].ptrquest[j].fim.minuto;
+			calcmin = vetDnP[i].ptrquest[jers].inicio.minuto - vetDnP[i].ptrquest[jers].fim.minuto;
 			int positivo = (calcmin < 0) ? -calcmin : calcmin;
 			std::cout << " (" << positivo << " min" << ")";
 			std::cout << std::endl;
@@ -76,7 +77,6 @@ int main() {
 			std::cout << "Média Dificuldade: " << resultado.mediaGrauDificuldade << "\n";
 			std::cout << "Média Tempo: " << resultado.mediaTempo << " minutos\n";
 		}
-		
 	}
 
 
