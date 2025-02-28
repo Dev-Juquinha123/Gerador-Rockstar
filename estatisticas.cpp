@@ -5,7 +5,7 @@
 int main() {
    
 	Drawline('*', 50);
-	std::cout << "Concurso de Programacao" << std::endl;
+	std::cout << "\033[36mConcurso de Programacao\033[0m" << std::endl;
 	int Nparticipantes;
 	int Nquestoes;
 
@@ -24,7 +24,7 @@ int main() {
 	// Coletando informacoes
 	for (size_t i = 0; i < Nparticipantes; i++)
 	{
-		std::cout << "Participante[" << i+1 << "]: ";
+		std::cout << "\033[1;33mParticipante[" << i+1 << "]:\033[0m ";
 		std::cin >> vetDnP[i].nome;
 		vetDnP[i].ptrquest = new Questoes[Nquestoes]; // Criando vetor dinâmico de questões para cada participante
 		for (size_t j = 0; j < Nquestoes; j++) {
@@ -46,7 +46,7 @@ int main() {
 	std::cout << std::endl;
 	Drawline('*', 50);
 	Drawline('-', 10);
-	std::cout << "Resumo por Participante" << std::endl;
+	std::cout << "\033[36mResumo por Participante\033[0m" << std::endl;
 	Drawline('-', 10);
 	for (size_t i = 0; i < Nparticipantes; i++) {
 		std::cout << vetDnP[i].nome << ":" << std::endl;
@@ -55,9 +55,29 @@ int main() {
 	Drawline('-', 10);
 	std::cout << std::endl;
 	Drawline('-', 10);
-	std::cout << "Resumo por Questao" << std::endl;
+	std::cout << "\033[36mResumo por Questoes\033[0m" << std::endl;
 	Drawline('-', 10);
-	Drawline('-', 10);
+	for (size_t i = 0; i < Nparticipantes; i++)
+	{
+		int tamvet = Nquestoes; // Definição correta do tamanho do vetor
+		Media resultado = CalcularResumoQuestoes(vetDnP[i].ptrquest, tamvet, 1, 2);
+
+		for (size_t j = 0; j < Nquestoes; j++) {
+			char questaoLetra = 'A' + j; // Gera letras A, B, C...
+			std::cout << "Questao " << questaoLetra << std::endl;
+			std::cout << "\t" << questaoLetra << " (" << vetDnP[i].ptrquest[j].Graudificuldade << ") " << vetDnP[i].ptrquest[j].inicio.hora << ":" << vetDnP[i].ptrquest[j].inicio.minuto << " as " << vetDnP[i].ptrquest[j].fim.hora << ":" << vetDnP[i].ptrquest[j].fim.minuto;
+			int calcmin;
+			calcmin = vetDnP[i].ptrquest[j].inicio.minuto - vetDnP[i].ptrquest[j].fim.minuto;
+			int positivo = (calcmin < 0) ? -calcmin : calcmin;
+			std::cout << " (" << positivo << " min" << ")";
+			std::cout << std::endl;
+
+
+			std::cout << "Média Dificuldade: " << resultado.mediaGrauDificuldade << "\n";
+			std::cout << "Média Tempo: " << resultado.mediaTempo << " minutos\n";
+		}
+		
+	}
 
 
 	// Evitar Memory leaker

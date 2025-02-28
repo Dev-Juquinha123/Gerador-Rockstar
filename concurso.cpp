@@ -25,6 +25,36 @@ void ResumoParticipantes(Questoes* ptrvpart, size_t Npart) {
 	}
 }
 
-void ResumoQuestoes(Questoes* ptrvquest, size_t Nquestoes) {
+// Função auxiliar para calcular a diferença entre horários em minutos
+double calcularDiferencaMinutos(Horario inicio, Horario fim) {
+    int inicioTotalMin = inicio.hora * 60 + inicio.minuto;
+    int fimTotalMin = fim.hora * 60 + fim.minuto;
+    return fimTotalMin - inicioTotalMin;
+}
 
+// Função para calcular a média das questões
+Media CalcularResumoQuestoes(Questoes* ptrvquest, const int tamvet, size_t IndiceInitial, size_t Passo) {
+    Media resultado = { 0.0, 0.0 };  // Inicializa a struct com zeros
+
+    if (!ptrvquest || tamvet <= 0 || IndiceInitial >= tamvet) {
+        std::cerr << "Parâmetros inválidos.\n";
+        return resultado; // Retorna valores zerados em caso de erro
+    }
+
+    double somaDificuldade = 0.0;
+    double somaTempo = 0.0;
+    int count = 0;
+
+    for (size_t i = IndiceInitial; i < tamvet; i += Passo) {
+        somaDificuldade += ptrvquest[i].Graudificuldade;
+        somaTempo += calcularDiferencaMinutos(ptrvquest[i].inicio, ptrvquest[i].fim);
+        count++;
+    }
+
+    if (count > 0) {
+        resultado.mediaGrauDificuldade = somaDificuldade / count;
+        resultado.mediaTempo = somaTempo / count;
+    }
+
+    return resultado;
 }

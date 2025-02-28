@@ -20,8 +20,8 @@ struct Questoes
 
 struct Media
 {
-	float mediaGrauDificuldade;
-	float mediaTempo;
+	double mediaGrauDificuldade;
+	double mediaTempo;
 };
 
 struct Participantes
@@ -32,4 +32,6 @@ struct Participantes
 
 void ResumoParticipantes(Questoes* ptrvpart, size_t Npart);
 
-void ResumoQuestoes(Questoes* ptrvquest, size_t Nquestoes);
+double calcularDiferencaMinutos(Horario inicio, Horario fim);
+
+Media CalcularResumoQuestoes(Questoes* ptrvquest, const int tamvet, size_t IndiceInitial, size_t Passo);
