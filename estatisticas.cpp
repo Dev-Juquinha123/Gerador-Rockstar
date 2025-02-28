@@ -52,6 +52,14 @@ int main() {
 		std::cout << vetDnP[i].nome << ":" << std::endl;
 		ResumoParticipantes(vetDnP[i].ptrquest, Nquestoes);
 	}
+	Drawline('-', 10);
+	std::cout << std::endl;
+	Drawline('-', 10);
+	std::cout << "Resumo por Questao" << std::endl;
+	Drawline('-', 10);
+	Drawline('-', 10);
+
+
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
 		delete[] vetDnP[i].ptrquest; // Deleta as questões do participante
