@@ -57,27 +57,39 @@ int main() {
 	Drawline('-', 10);
 	std::cout << "\033[36mResumo por Questoes\033[0m" << std::endl;
 	Drawline('-', 10);
-	for (size_t i = 0; i < Nquestoes; i++)
-	{
+	for (size_t i = 0; i < Nquestoes; i++) {
 		int tamvet = Nquestoes; // Definição correta do tamanho do vetor
-		Media resultado = CalcularResumoQuestoes(vetDnP[i].ptrquest, tamvet, 1, 2);
+		Media resultado = CalcularResumoQuestoes(vetDnP[0].ptrquest, tamvet, 1, 2);
 
 		char questaoLetra = 'A' + i;
 		std::cout << "Questao " << questaoLetra << std::endl;
-		for (size_t jers = 0; jers < Nparticipantes; jers++)
-		{
-			std::cout << "\t" << vetDnP[jers].nome << " (" << vetDnP[i].ptrquest[jers].Graudificuldade << ") " << vetDnP[i].ptrquest[jers].inicio.hora << ":" << vetDnP[i].ptrquest[jers].inicio.minuto << " as " << vetDnP[i].ptrquest[jers].fim.hora << ":" << vetDnP[i].ptrquest[jers].fim.minuto;
-			int calcmin;
-			calcmin = vetDnP[i].ptrquest[jers].inicio.minuto - vetDnP[i].ptrquest[jers].fim.minuto;
+
+		for (size_t jers = 0; jers + 1 < Nparticipantes; jers += 2) { // Garante que jers + 1 não ultrapasse Nparticipantes
+			std::cout << "\t" << vetDnP[jers].nome << " ("
+				<< vetDnP[jers].ptrquest[i].Graudificuldade << ") "
+				<< vetDnP[jers].ptrquest[i].inicio.hora << ":"
+				<< vetDnP[jers].ptrquest[i].inicio.minuto << " as "
+				<< vetDnP[jers].ptrquest[i].fim.hora << ":"
+				<< vetDnP[jers].ptrquest[i].fim.minuto;
+
+			int calcmin = vetDnP[jers].ptrquest[i].fim.minuto - vetDnP[jers].ptrquest[i].inicio.minuto;
 			int positivo = (calcmin < 0) ? -calcmin : calcmin;
-			std::cout << " (" << positivo << " min" << ")";
-			std::cout << std::endl;
+			std::cout << " (" << positivo << " min)" << std::endl;
 
+			// Exibe o segundo participante imediatamente após o primeiro
+			std::cout << "\t" << vetDnP[jers + 1].nome << " ("
+				<< vetDnP[jers + 1].ptrquest[i].Graudificuldade << ") "
+				<< vetDnP[jers + 1].ptrquest[i].inicio.hora << ":"
+				<< vetDnP[jers + 1].ptrquest[i].inicio.minuto << " as "
+				<< vetDnP[jers + 1].ptrquest[i].fim.hora << ":"
+				<< vetDnP[jers + 1].ptrquest[i].fim.minuto;
 
-			std::cout << "Média Dificuldade: " << resultado.mediaGrauDificuldade << "\n";
-			std::cout << "Média Tempo: " << resultado.mediaTempo << " minutos\n";
+			calcmin = vetDnP[jers + 1].ptrquest[i].fim.minuto - vetDnP[jers + 1].ptrquest[i].inicio.minuto;
+			positivo = (calcmin < 0) ? -calcmin : calcmin;
+			std::cout << " (" << positivo << " min)" << std::endl;
 		}
 	}
+
 
 
 	// Evitar Memory leaker
