@@ -1,14 +1,33 @@
 #pragma once
+#include <iostream>
 
 // Prototipos de funcoes e Registros
 void Drawline(char item, int vezesdwl);
-
 
 
 struct Horario
 {
 	int hora;
 	int minuto;
+
+    // Sobrecarga do operador de entrada (cin)
+    friend std::istream& operator>>(std::istream& in, Horario& h) {
+        char separador; // Para lidar com formato HH:MM
+        in >> h.hora >> separador >> h.minuto;
+        return in;
+    }
+
+    // Sobrecarga do operador de saída (cout)
+    friend std::ostream& operator<<(std::ostream& out, const Horario& h) {
+        out << (h.hora < 10 ? "0" : "") << h.hora << ":"
+            << (h.minuto < 10 ? "0" : "") << h.minuto;
+        return out;
+    }
+
+    // Sobrecarga do operador de subtração (-) para calcular a diferença em minutos
+    int operator-(const Horario& h) const {
+        return (hora * 60 + minuto) - (h.hora * 60 + h.minuto);
+    }
 };
 
 struct Questoes

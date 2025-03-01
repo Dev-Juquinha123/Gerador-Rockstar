@@ -6,40 +6,40 @@ int main() {
    
 	Drawline('*', 50);
 	std::cout << "\033[36mConcurso de Programacao\033[0m" << std::endl;
-	int Nparticipantes;
-	int Nquestoes;
 
-	// Coletando informacoes
+	int Nparticipantes, Nquestoes;
+
+	// Coletando informações
 	std::cout << "Qual o numero de participantes? ";
 	std::cin >> Nparticipantes;
 	std::cout << "Qual o numero de questoes? ";
 	std::cin >> Nquestoes;
 
-	// Vetor dinamico de Participantes
+	// Vetor dinâmico de Participantes
 	Participantes* vetDnP = new Participantes[Nparticipantes];
 
 	Drawline('*', 50);
-	Drawline('-', 10);
 
-	// Coletando informacoes
-	for (size_t i = 0; i < Nparticipantes; i++)
-	{
-		std::cout << "\033[1;33mParticipante[" << i+1 << "]:\033[0m ";
+	// Coletando informações
+	for (size_t i = 0; i < Nparticipantes; i++) {
+		std::cout << "\033[1;33mParticipante[" << i + 1 << "]:\033[0m ";
 		std::cin >> vetDnP[i].nome;
 		vetDnP[i].ptrquest = new Questoes[Nquestoes]; // Criando vetor dinâmico de questões para cada participante
+
 		for (size_t j = 0; j < Nquestoes; j++) {
 			char questaoLetra = 'A' + j; // Gera letras A, B, C...
 			Drawline('-', 10);
 			std::cout << "Questao " << questaoLetra << std::endl;
 			std::cout << "\tDificuldade: ";
 			std::cin >> vetDnP[i].ptrquest[j].Graudificuldade;
-			std::cout << "\tInicio: ";
-			std::cin >> vetDnP[i].ptrquest[j].inicio.hora >> vetDnP[i].ptrquest[j].inicio.minuto;
-			std::cout << "\tFim: ";
-			std::cin >> vetDnP[i].ptrquest[j].fim.hora >> vetDnP[i].ptrquest[j].fim.minuto;
-			
-		}
 
+			std::cout << "\tInicio: ";
+			std::cin >> vetDnP[i].ptrquest[j].inicio;
+
+			std::cout << "\tFim: ";
+			std::cin >> vetDnP[i].ptrquest[j].fim;
+
+		}
 		Drawline('-', 10);
 	}
 	
