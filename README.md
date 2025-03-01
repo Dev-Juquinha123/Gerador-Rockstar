@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>GERADOR DE ROCKSTAR </strong>
+  <strong>GERADOR DE ROCKSTAR  </strong>
 </p>
 
 <p align="center">
