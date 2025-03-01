@@ -68,27 +68,22 @@ int main() {
 		for (size_t jers = 0; jers + 1 < Nparticipantes; jers += 2) { // Garante que jers + 1 não ultrapasse Nparticipantes
 			std::cout << "\t" << vetDnP[jers].nome << " ("
 				<< vetDnP[jers].ptrquest[i].Graudificuldade << ") "
-				<< vetDnP[jers].ptrquest[i].inicio.hora << ":"
-				<< vetDnP[jers].ptrquest[i].inicio.minuto << " as "
-				<< vetDnP[jers].ptrquest[i].fim.hora << ":"
-				<< vetDnP[jers].ptrquest[i].fim.minuto;
+				<< vetDnP[jers].ptrquest[i].inicio << " as "
+				<< vetDnP[jers].ptrquest[i].fim; // Usa operador << sobrecarregado
 
-			int calcmin = vetDnP[jers].ptrquest[i].fim.minuto - vetDnP[jers].ptrquest[i].inicio.minuto;
-			int positivo = (calcmin < 0) ? -calcmin : calcmin;
-			std::cout << " (" << positivo << " min)" << std::endl;
+			int calcmin = vetDnP[jers].ptrquest[i].fim - vetDnP[jers].ptrquest[i].inicio;
+			std::cout << " (" << std::abs(calcmin) << " min)" << std::endl; // Usa abs para garantir número positivo
 
 			// Exibe o segundo participante imediatamente após o primeiro
 			std::cout << "\t" << vetDnP[jers + 1].nome << " ("
 				<< vetDnP[jers + 1].ptrquest[i].Graudificuldade << ") "
-				<< vetDnP[jers + 1].ptrquest[i].inicio.hora << ":"
-				<< vetDnP[jers + 1].ptrquest[i].inicio.minuto << " as "
-				<< vetDnP[jers + 1].ptrquest[i].fim.hora << ":"
-				<< vetDnP[jers + 1].ptrquest[i].fim.minuto;
+				<< vetDnP[jers + 1].ptrquest[i].inicio << " as "
+				<< vetDnP[jers + 1].ptrquest[i].fim;
 
-			calcmin = vetDnP[jers + 1].ptrquest[i].fim.minuto - vetDnP[jers + 1].ptrquest[i].inicio.minuto;
-			positivo = (calcmin < 0) ? -calcmin : calcmin;
-			std::cout << " (" << positivo << " min)" << std::endl;
+			calcmin = vetDnP[jers + 1].ptrquest[i].fim - vetDnP[jers + 1].ptrquest[i].inicio;
+			std::cout << " (" << std::abs(calcmin) << " min)" << std::endl;
 		}
+
 	}
 	std::cout << std::endl;
 	Drawline('-', 10);
@@ -137,7 +132,7 @@ int main() {
 	double mediaGeralTempo = tempoTotal / totalQuestoes;
 
 	std::cout << "Concurso: ";
-	std::cout << "  Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
+	std::cout << " Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
 
 	
 

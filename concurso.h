@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 
 // Prototipos de funcoes e Registros
 void Drawline(char item, int vezesdwl);
@@ -19,8 +20,8 @@ struct Horario
 
     // Sobrecarga do operador de saída (cout)
     friend std::ostream& operator<<(std::ostream& out, const Horario& h) {
-        out << (h.hora < 10 ? "0" : "") << h.hora << ":"
-            << (h.minuto < 10 ? "0" : "") << h.minuto;
+        out << std::setw(2) << std::setfill('0') << h.hora << ":"
+            << std::setw(2) << std::setfill('0') << h.minuto;
         return out;
     }
 
