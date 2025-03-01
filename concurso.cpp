@@ -61,3 +61,4 @@ Media CalcularResumoQuestoes(Questoes* ptrvquest, const int tamvet, size_t Indic
     return resultado;
 }
 
+std::cout << std::endl;
