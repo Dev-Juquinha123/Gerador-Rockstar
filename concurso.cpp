@@ -10,7 +10,7 @@ void Drawline(char item, int vezesdwl) {
 	}
 	std::cout << std::endl;
 }
-
+// size_t tipo inteiro
 void ResumoParticipantes(Questoes* ptrvpart, size_t Npart) {
     // Sem nome do participante
     for (size_t p = 0; p < Npart; p++) {
