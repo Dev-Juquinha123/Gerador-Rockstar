@@ -94,6 +94,8 @@ int main() {
 	Drawline('-', 10);
 	std::cout << "\033[36mEstatisticas\033[0m" << std::endl;
 	Drawline('-', 10);
+	std::cout << std::fixed;
+	std::cout.precision(2);
 
 	for (size_t i = 0; i < Nquestoes; i++)
 	{
@@ -129,12 +131,13 @@ int main() {
 			tempoTotal += calcularDiferencaMinutos(vetDnP[i].ptrquest[j].inicio, vetDnP[i].ptrquest[j].fim);
 		}
 	}
+	
 
 	double mediaGeralDificuldade = dificuldadeTotal / totalQuestoes;
 	double mediaGeralTempo = tempoTotal / totalQuestoes;
 
 	std::cout << "Concurso: ";
-	std::cout << "Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
+	std::cout << "  Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
 
 	
 
