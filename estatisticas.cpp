@@ -93,12 +93,48 @@ int main() {
 	Drawline('-', 10);
 	std::cout << "\033[36mEstatisticas\033[0m" << std::endl;
 	Drawline('-', 10);
+
 	for (size_t i = 0; i < Nquestoes; i++)
 	{
-		char questaoLetraqs = 'A' + i;
-		std::cout << "Questao " << questaoLetraqs << std::endl;
-		std::cout << "Dificuldade: (" << resultado.mediaGrauDificuldade << ") - Tempo (" << resultado.mediaTempo << " minutos)" << std::endl;
+		double somaDificuldade = 0.0;
+		double somaTempo = 0.0;
+		int totalParticipantes = 0;
+
+		for (size_t j = 0; j < Nparticipantes; j++)
+		{
+			somaDificuldade += vetDnP[j].ptrquest[i].Graudificuldade;
+			somaTempo += calcularDiferencaMinutos(vetDnP[j].ptrquest[i].inicio, vetDnP[j].ptrquest[i].fim);
+			totalParticipantes++;
+		}
+
+		double mediaDificuldade = somaDificuldade / totalParticipantes;
+		double mediaTempo = somaTempo / totalParticipantes;
+
+		char questaoLetra = 'A' + i;
+		std::cout << "Questao " << questaoLetra << ": ";
+		std::cout << "Dificuldade (" << mediaDificuldade << ") - Tempo (" << mediaTempo << " minutos)" << std::endl;
 	}
+
+	// Média geral do concurso
+	double dificuldadeTotal = 0.0;
+	double tempoTotal = 0.0;
+	int totalQuestoes = Nparticipantes * Nquestoes;
+
+	for (size_t i = 0; i < Nparticipantes; i++)
+	{
+		for (size_t j = 0; j < Nquestoes; j++)
+		{
+			dificuldadeTotal += vetDnP[i].ptrquest[j].Graudificuldade;
+			tempoTotal += calcularDiferencaMinutos(vetDnP[i].ptrquest[j].inicio, vetDnP[i].ptrquest[j].fim);
+		}
+	}
+
+	double mediaGeralDificuldade = dificuldadeTotal / totalQuestoes;
+	double mediaGeralTempo = tempoTotal / totalQuestoes;
+
+	std::cout << "Concurso: ";
+	std::cout << "Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
+
 	
 
 	// Evitar Memory leaker
