@@ -56,7 +56,7 @@ int main() {
 	Drawline('-', 10);
 	std::cout << std::endl;
 	Drawline('-', 10);
-	std::cout << "\033[36mResumo por Questoes\033[0m  " << std::endl;
+	std::cout << "\033[36mResumo por Questoes\033[0m" << std::endl;
 	Drawline('-', 10);
 	for (size_t i = 0; i < Nquestoes; i++) {
 		int tamvet = Nquestoes; // Definição correta do tamanho do vetor
@@ -91,6 +91,7 @@ int main() {
 	Drawline('-', 10);
 	std::cout << std::fixed;
 	std::cout.precision(2);
+
 
 	for (size_t i = 0; i < Nquestoes; i++)
 	{
