@@ -63,7 +63,7 @@ int main() {
 		Media resultado = CalcularResumoQuestoes(vetDnP[0].ptrquest, tamvet, 1, 2);
 
 		char questaoLetra = 'A' + i;
-		std::cout << "Questao " << questaoLetra << std::endl;
+		std::cout << "Questao(s) " << questaoLetra << std::endl;
 
 		for (size_t jers = 0; jers + 1 < Nparticipantes; jers += 2) { // Garante que jers + 1 não ultrapasse Nparticipantes
 			std::cout << "\t" << vetDnP[jers].nome << " ("
