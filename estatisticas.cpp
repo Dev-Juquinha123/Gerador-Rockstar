@@ -1,120 +1,149 @@
 #include <iostream>
 #include <iomanip>
-#include <vector>
-#include <cmath>
 #include "concurso.h"
 
-void coletarDadosParticipantes(std::vector<Participantes>& participantes, int Nquestoes) {
-    for (size_t i = 0; i < participantes.size(); i++) {
-        std::cout << "\033[1;33mParticipante[" << i + 1 << "]:\033[0m ";
-        std::cin >> participantes[i].nome;
-        participantes[i].ptrquest.resize(Nquestoes);
-
-        for (size_t j = 0; j < Nquestoes; j++) {
-            char questaoLetra = 'A' + j;
-            Drawline('-', 10);
-            std::cout << "Questao " << questaoLetra << std::endl;
-            std::cout << "\tDificuldade: ";
-            std::cin >> participantes[i].ptrquest[j].Graudificuldade;
-            std::cout << "\tInicio: ";
-            std::cin >> participantes[i].ptrquest[j].inicio;
-            std::cout << "\tFim: ";
-            std::cin >> participantes[i].ptrquest[j].fim;
-        }
-        Drawline('-', 10);
-    }
-}
-
-void exibirResumoParticipantes(const std::vector<Participantes>& participantes, int Nquestoes) {
-    Drawline('*', 50);
-    Drawline('-', 10);
-    std::cout << "\033[36mResumo por Participante\033[0m" << std::endl;
-    Drawline('-', 10);
-
-    for (const auto& p : participantes) {
-        std::cout << p.nome << ":" << std::endl;
-        ResumoParticipantes(p.ptrquest.data(), Nquestoes);
-    }
-}
-
-void exibirResumoQuestoes(const std::vector<Participantes>& participantes, int Nquestoes) {
-    Drawline('-', 10);
-    std::cout << "\033[36mResumo por Questoes\033[0m" << std::endl;
-    Drawline('-', 10);
-
-    for (size_t i = 0; i < Nquestoes; i++) {
-        char questaoLetra = 'A' + i;
-        std::cout << "Questao " << questaoLetra << std::endl;
-
-        for (size_t j = 0; j < participantes.size(); j++) {
-            std::cout << "\t" << participantes[j].nome << " ("
-                << participantes[j].ptrquest[i].Graudificuldade << ") "
-                << participantes[j].ptrquest[i].inicio << " as "
-                << participantes[j].ptrquest[i].fim;
-
-            int tempo = std::abs(participantes[j].ptrquest[i].fim - participantes[j].ptrquest[i].inicio);
-            std::cout << " (" << tempo << " min)" << std::endl;
-        }
-    }
-}
-
-void calcularEstatisticas(const std::vector<Participantes>& participantes, int Nquestoes) {
-    Drawline('-', 10);
-    std::cout << "\033[36mEstatísticas\033[0m" << std::endl;
-    Drawline('-', 10);
-    std::cout << std::fixed << std::setprecision(2);
-
-    for (size_t i = 0; i < Nquestoes; i++) {
-        double somaDificuldade = 0.0, somaTempo = 0.0;
-        int totalParticipantes = participantes.size();
-
-        for (const auto& p : participantes) {
-            somaDificuldade += p.ptrquest[i].Graudificuldade;
-            somaTempo += calcularDiferencaMinutos(p.ptrquest[i].inicio, p.ptrquest[i].fim);
-        }
-
-        double mediaDificuldade = somaDificuldade / totalParticipantes;
-        double mediaTempo = somaTempo / totalParticipantes;
-
-        char questaoLetra = 'A' + i;
-        std::cout << "Questao " << questaoLetra << ": Dificuldade (" << mediaDificuldade
-            << ") - Tempo (" << mediaTempo << " minutos)" << std::endl;
-    }
-
-    // Média geral
-    double dificuldadeTotal = 0.0, tempoTotal = 0.0;
-    int totalQuestoes = participantes.size() * Nquestoes;
-
-    for (const auto& p : participantes) {
-        for (const auto& q : p.ptrquest) {
-            dificuldadeTotal += q.Graudificuldade;
-            tempoTotal += calcularDiferencaMinutos(q.inicio, q.fim);
-        }
-    }
-
-    std::cout << "Concurso: Dificuldade (" << (dificuldadeTotal / totalQuestoes)
-        << ") - Tempo (" << (tempoTotal / totalQuestoes) << " minutos)" << std::endl;
-}
 
 int main() {
-    Drawline('*', 50);
-    std::cout << "\033[36mConcurso de Programacao\033[0m" << std::endl;
+   
+	Drawline('*', 50);
+	std::cout << "\033[36mConcurso de Programacao\033[0m" << std::endl;
 
-    int Nparticipantes, Nquestoes;
+	int Nparticipantes, Nquestoes;
 
-    std::cout << "Qual o numero de participantes? ";
-    std::cin >> Nparticipantes;
-    std::cout << "Qual o numero de questoes? ";
-    std::cin >> Nquestoes;
+	// Coletando informações
+	std::cout << "Qual o numero de participantes? ";
+	std::cin >> Nparticipantes;
+	std::cout << "Qual o numero de questoes? ";
+	std::cin >> Nquestoes;
 
-    std::vector<Participantes> participantes(Nparticipantes);
+	// Vetor dinâmico de Participantes
+	Participantes* vetDnP = new Participantes[Nparticipantes];
 
-    Drawline('*', 50);
-    coletarDadosParticipantes(participantes, Nquestoes);
-    exibirResumoParticipantes(participantes, Nquestoes);
-    exibirResumoQuestoes(participantes, Nquestoes);
-    calcularEstatisticas(participantes, Nquestoes);
+	Drawline('*', 50);
 
-    Drawline('-', 50);
+	// Coletando informações
+	for (size_t i = 0; i < Nparticipantes; i++) {
+		std::cout << "\033[1;33mParticipante[" << i + 1 << "]:\033[0m ";
+		std::cin >> vetDnP[i].nome;
+		vetDnP[i].ptrquest = new Questoes[Nquestoes]; // Criando vetor dinâmico de questões para cada participante
+
+		for (size_t j = 0; j < Nquestoes; j++) {
+			char questaoLetra = 'A' + j; // Gera letras A, B, C...
+			Drawline('-', 10);
+			std::cout << "Questao " << questaoLetra << std::endl;
+			std::cout << "\tDificuldade: ";
+			std::cin >> vetDnP[i].ptrquest[j].Graudificuldade;
+
+			std::cout << "\tInicio: ";
+			std::cin >> vetDnP[i].ptrquest[j].inicio;
+
+			std::cout << "\tFim: ";
+			std::cin >> vetDnP[i].ptrquest[j].fim;
+
+		}
+		Drawline('-', 10);
+	}
+	
+	std::cout << std::endl;
+	Drawline('*', 50);
+	Drawline('-', 10);
+	std::cout << "\033[36mResumo por Participante\033[0m" << std::endl;
+	Drawline('-', 10);
+	for (size_t i = 0; i < Nparticipantes; i++) {
+		std::cout << vetDnP[i].nome << ":" << std::endl;
+		ResumoParticipantes(vetDnP[i].ptrquest, Nquestoes);
+	}
+	Drawline('-', 10);
+	std::cout << std::endl;
+	Drawline('-', 10);
+	std::cout << "\033[36mResumo por Questoes\033[0m" << std::endl;
+	Drawline('-', 10);
+	for (size_t i = 0; i < Nquestoes; i++) {
+		int tamvet = Nquestoes; // Definição correta do tamanho do vetor
+		Media resultado = CalcularResumoQuestoes(vetDnP[0].ptrquest, tamvet, 1, 2);
+
+		char questaoLetra = 'A' + i;
+		std::cout << "Questao(s) " << questaoLetra << std::endl;
+
+		for (size_t jers = 0; jers + 1 < Nparticipantes; jers += 2) { // Garante que jers + 1 não ultrapasse Nparticipantes
+			std::cout << "\t" << vetDnP[jers].nome << " ("
+				<< vetDnP[jers].ptrquest[i].Graudificuldade << ") "
+				<< vetDnP[jers].ptrquest[i].inicio << " as "
+				<< vetDnP[jers].ptrquest[i].fim; // Usa operador << sobrecarregado
+
+			int calcmin = vetDnP[jers].ptrquest[i].fim - vetDnP[jers].ptrquest[i].inicio;
+			std::cout << " (" << std::abs(calcmin) << " min)" << std::endl; // Usa abs para garantir número positivo
+
+			// Exibe o segundo participante imediatamente após o primeiro
+			std::cout << "\t" << vetDnP[jers + 1].nome << " ("
+				<< vetDnP[jers + 1].ptrquest[i].Graudificuldade << ") "
+				<< vetDnP[jers + 1].ptrquest[i].inicio << " as "
+				<< vetDnP[jers + 1].ptrquest[i].fim;
+
+			calcmin = vetDnP[jers + 1].ptrquest[i].fim - vetDnP[jers + 1].ptrquest[i].inicio;
+			std::cout << " (" << std::abs(calcmin) << " min)" << std::endl;
+		}
+
+	}
+	std::cout << std::endl;
+	Drawline('-', 10);
+	std::cout << "\033[36mEstatisticas\033[0m" << std::endl;
+	Drawline('-', 10);
+	Drawline('-', 10);
+	std::cout << std::fixed;
+	std::cout.precision(2);
+
+
+	for (size_t i = 0; i < Nquestoes; i++)
+	{
+		double somaDificuldade = 0.0;
+		double somaTempo = 0.0;
+		int totalParticipantes = 0;
+
+		for (size_t j = 0; j < Nparticipantes; j++)
+		{
+			somaDificuldade += vetDnP[j].ptrquest[i].Graudificuldade;
+			somaTempo += calcularDiferencaMinutos(vetDnP[j].ptrquest[i].inicio, vetDnP[j].ptrquest[i].fim);
+			totalParticipantes++;
+		}
+
+		double mediaDificuldade = somaDificuldade / totalParticipantes;
+		double mediaTempo = somaTempo / totalParticipantes;
+
+		char questaoLetra = 'A' + i;
+		std::cout << "Questao " << questaoLetra << ": ";
+		std::cout << "Dificuldade (" << mediaDificuldade << ") - Tempo (" << mediaTempo << " minutos)" << std::endl;
+	}
+
+	// Média geral do concurso
+	double dificuldadeTotal = 0.0;
+	double tempoTotal = 0.0;
+	int totalQuestoes = Nparticipantes * Nquestoes;
+
+	for (size_t i = 0; i < Nparticipantes; i++)
+	{
+		for (size_t j = 0; j < Nquestoes; j++)
+		{
+			dificuldadeTotal += vetDnP[i].ptrquest[j].Graudificuldade;
+			tempoTotal += calcularDiferencaMinutos(vetDnP[i].ptrquest[j].inicio, vetDnP[i].ptrquest[j].fim);
+		}
+	}
+	
+
+	double mediaGeralDificuldade = dificuldadeTotal / totalQuestoes;
+	double mediaGeralTempo = tempoTotal / totalQuestoes;
+
+	std::cout << "Concurso: ";
+	std::cout << " Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
+	std::cout << std::endl;
+	
+
+	// Evitar Memory leaker
+	for (int i = 0; i < Nparticipantes; i++) {
+		delete[] vetDnP[i].ptrquest; // Deleta as questões do participante
+	}
+	delete[] vetDnP; // Deleta o vetor de participantes
+
+	Drawline('-', 50);
     return 0;
 }
