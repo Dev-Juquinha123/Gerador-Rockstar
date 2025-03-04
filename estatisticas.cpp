@@ -134,7 +134,7 @@ int main() {
 
 	std::cout << "Concurso: ";
 	std::cout << " Dificuldade (" << mediaGeralDificuldade << ") - Tempo (" << mediaGeralTempo << " minutos)" << std::endl;
-
+	std::cout << std::endl;
 	
 
 	// Evitar Memory leaker
