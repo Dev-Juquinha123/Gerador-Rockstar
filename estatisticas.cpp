@@ -144,5 +144,6 @@ int main() {
 	delete[] vetDnP; // Deleta o vetor de participantes
 
 	Drawline('*', 50);
+	Drawline('*', 50);
     return 0;
 }
