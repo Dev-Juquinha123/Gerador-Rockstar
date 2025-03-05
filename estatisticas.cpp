@@ -89,7 +89,6 @@ int main() {
 	Drawline('-', 10);
 	std::cout << "\033[36mEstatisticas\033[0m" << std::endl;
 	Drawline('-', 10);
-	Drawline('-', 10);
 	std::cout << std::fixed;
 	std::cout.precision(2);
 
