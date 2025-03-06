@@ -49,6 +49,7 @@ int main() {
 	Drawline('-', 10);
 	std::cout << "\033[36mResumo por Participante\033[0m" << std::endl;
 	Drawline('-', 10);
+
 	for (size_t i = 0; i < Nparticipantes; i++) {
 		std::cout << vetDnP[i].nome << ":" << std::endl;
 		ResumoParticipantes(vetDnP[i].ptrquest, Nquestoes);
