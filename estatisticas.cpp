@@ -21,6 +21,7 @@ int main() {
 
 	Drawline('*', 50);
 
+
 	// Coletando informações
 	for (size_t i = 0; i < Nparticipantes; i++) {
 		std::cout << "\033[1;33mParticipante[" << i + 1 << "]:\033[0m ";
