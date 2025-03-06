@@ -47,6 +47,7 @@ int main() {
 	std::cout << std::endl;
 	Drawline('*', 50);
 	Drawline('-', 10);
+
 	std::cout << "\033[36mResumo por Participante\033[0m" << std::endl;
 	Drawline('-', 10);
 
