@@ -8,6 +8,7 @@ int main() {
 	Drawline('*', 50);
 	std::cout << "\033[36mConcurso de Programacao\033[0m" << std::endl;
 
+	Drawline('*', 50);
 	int Nparticipantes, Nquestoes;
 
 	// Coletando informações
