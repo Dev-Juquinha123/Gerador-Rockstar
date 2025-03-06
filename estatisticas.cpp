@@ -144,6 +144,7 @@ int main() {
 	std::cout << std::endl;
 	
 
+
 	// Evitar Memory leaker
 	for (int i = 0; i < Nparticipantes; i++) {
 		delete[] vetDnP[i].ptrquest; // Deleta as questões do participante
