@@ -15,6 +15,7 @@ int main() {
 	std::cout << "Qual o numero de participantes? ";
 	std::cin >> Nparticipantes;
 	std::cout << "Qual o numero de questoes? ";
+
 	std::cin >> Nquestoes;
 
 	// Vetor dinâmico de Participantes
