@@ -14,6 +14,7 @@ int main() {
 	// Coletando informações
 	std::cout << "Qual o numero de participantes? ";
 	std::cin >> Nparticipantes;
+
 	std::cout << "Qual o numero de questoes? ";
 
 	std::cin >> Nquestoes;
