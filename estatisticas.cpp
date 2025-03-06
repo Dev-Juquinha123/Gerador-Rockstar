@@ -80,6 +80,7 @@ int main() {
 				<< vetDnP[jers + 1].ptrquest[i].inicio << " as "
 				<< vetDnP[jers + 1].ptrquest[i].fim;
 
+
 			calcmin = vetDnP[jers + 1].ptrquest[i].fim - vetDnP[jers + 1].ptrquest[i].inicio;
 			std::cout << " (" << std::abs(calcmin) << " min)" << std::endl;
 		}
