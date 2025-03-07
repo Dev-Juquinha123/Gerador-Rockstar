@@ -135,8 +135,6 @@ int main() {
 		}
 	}
 	
-
-	
 	double mediaGeralDificuldade = dificuldadeTotal / totalQuestoes;
 	double mediaGeralTempo = tempoTotal / totalQuestoes;
 
