@@ -18,12 +18,9 @@
     <ClCompile Include="estatisticas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="concurso.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="concurso.h">
+    <ClInclude Include="Jogo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

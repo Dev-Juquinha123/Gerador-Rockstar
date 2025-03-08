@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string>
-#include <iomanip>
-#include "concurso.h"
 
 struct Jogo
 {
@@ -19,6 +17,7 @@ void exibir(const Jogo& jogo);
 int main() {
 
 
-	
-    return 0;
+
+	return 0;
 }
+	
