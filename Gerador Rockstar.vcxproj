@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="estatisticas.cpp" />
+    <ClCompile Include="Orientado.cpp" />
     <ClCompile Include="Jogo.cpp" />
   </ItemGroup>
   <ItemGroup>
