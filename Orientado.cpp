@@ -13,8 +13,15 @@ int main() {
 	gow.adquirir("Gow", 160.0f);
 	gow.exibir();
 
-	gow.jogar(5);
 
+	gow.jogar(5);
+	gow.exibir();
+	
+	gow.jogar(3);
+	gow.exibir();
+
+	gow.jogar(5);
+	gow.exibir();
 	return 0;
 }
 	
