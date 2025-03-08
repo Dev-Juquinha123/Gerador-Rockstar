@@ -13,7 +13,7 @@ private:
 	std::string nome;
 	float preco;
 	int horas;
-	float custo;
+	float custo = 0;
 	void calcular()
 	{
 		if (horas > 0)
