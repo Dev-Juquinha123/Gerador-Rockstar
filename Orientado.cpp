@@ -10,10 +10,10 @@ int main() {
 
 
 	// Chamando metodos
-	gow.adquirir("God of War", 79.99f);
+	gow.adquirir("Gow", 160.0f);
 	gow.exibir();
 
-
+	gow.jogar(5);
 
 	return 0;
 }

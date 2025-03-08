@@ -14,8 +14,7 @@ private:
 	float preco;
 	int horas;
 	float custo = 0;
-	void calcular()
-	{
+	void calcular() {
 		if (horas > 0)
 		{
 			custo = preco / horas;
