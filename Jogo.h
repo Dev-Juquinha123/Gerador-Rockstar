@@ -22,11 +22,3 @@ private:
 		}
 	}
 };
-
-Jogo::Jogo()
-{
-}
-
-Jogo::~Jogo()
-{
-}

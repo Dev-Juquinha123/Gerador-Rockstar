@@ -18,6 +18,9 @@
     <ClCompile Include="estatisticas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Jogo.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h">

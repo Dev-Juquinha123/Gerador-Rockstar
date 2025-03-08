@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="estatisticas.cpp" />
+    <ClCompile Include="Jogo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h" />
