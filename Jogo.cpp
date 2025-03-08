@@ -24,7 +24,5 @@ void Jogo::jogar(int tempo)
 
 void Jogo::exibir()
 {
-	std::cout << std::fixed;
-	std::cout.precision(0);
 	std::cout << nome << " R$" << preco << " " << horas << "h = R$" << custo << "/h\n";
 }
