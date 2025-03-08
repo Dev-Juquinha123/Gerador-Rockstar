@@ -1,22 +1,13 @@
 #include <iostream>
-#include <string>
+#include "Jogo.h"
 
-struct Jogo
-{
-	std::string nome;
-	float perco;
-	int horas;
-	float custo;
-};
 
-Jogo adquirir(const std::string& nome, float perco, int horas, float custo);
-void atualziar(Jogo& jogo, float valor);
-void jogar(Jogo& jogo, int tempo);
-void exibir(const Jogo& jogo);
 
 int main() {
 
+	// Variavel do tipo Jogo
 
+	// Chamando metodos
 
 	return 0;
 }
