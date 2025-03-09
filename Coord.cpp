@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Coord.h"
 
-
+// Criar retangulo
 void Rect::Create(int ax, int ay, int bx, int by)
 {
 }
