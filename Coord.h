@@ -1,11 +1,12 @@
 #pragma once
-class Coord
+class Rect
 {
 private:
-	int x = 0;
-	int y = 0;
+	Point a;
+	Point b;
+	
 public:
+	void Create(int ax, int ay, int bx, int by);
 	void Translate(int dx, int dy);
-	void MoveTo(int px, int py);
 };
 
