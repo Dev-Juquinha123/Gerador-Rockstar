@@ -6,22 +6,22 @@
 int main() {
 
 	// Variavel do tipo Jogo
-	Jogo gow;
-	Jogo down;
+	Jogo gear;
+	Jogo doom;
 
 	// Chamando metodos
-	gow.adquirir("Gow", 160.0f);
-	gow.exibir();
+	gear.adquirir("Gears", 75);
+	gear.jogar(5);
+	gear.exibir();
+	std::cout << "Mem. : " << &gear << std::endl;
 
+	std::cout << "----------------------------------\n";
 
-	gow.jogar(5);
-	gow.exibir();
-	
-	gow.jogar(3);
-	gow.exibir();
+	doom.adquirir("Doom", 90);
+	doom.jogar(3);
+	doom.exibir();
+	std::cout << "Mem. : " << &doom << std::endl;
 
-	gow.jogar(5);
-	gow.exibir();
 	return 0;
 }
 	
