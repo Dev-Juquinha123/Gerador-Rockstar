@@ -7,7 +7,7 @@ int main() {
 
 	// Variavel do tipo Jogo
 	Jogo gow;
-
+	Jogo down;
 
 	// Chamando metodos
 	gow.adquirir("Gow", 160.0f);
