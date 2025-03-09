@@ -1,4 +1,15 @@
 #pragma once
+
+class Point
+{
+public:
+	int a;
+	int b;
+
+private:
+
+};
+
 class Rect
 {
 private:

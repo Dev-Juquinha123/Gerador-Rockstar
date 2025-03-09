@@ -3,29 +3,11 @@
 #include "Coord.h"
 
 
-void Coord::Translate(int dx, int dy)
+void Rect::Create(int ax, int ay, int bx, int by)
 {
-	if (x >= 0 && x <= 1919 && y >= 0 && y <= 1079)
-	{
-		x += dx;
-		y += dy;
-	}
-	else
-	{
-		std::cout << "Coordenadas fora da tela" << std::endl;
-	}
-	
 }
 
-void Coord::MoveTo(int px, int py)
+// Movimentar retangulo
+void Rect::Translate(int dx, int dy)
 {
-	if (x >= 0 && x <= 1919 && y >= 0 && y <= 1079)
-	{
-		x = px;
-		y = py;
-	}
-	else
-	{
-		std::cout << "Coordenadas fora da tela" << std::endl;
-	}
 }
