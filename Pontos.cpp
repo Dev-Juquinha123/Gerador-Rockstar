@@ -1,26 +1,13 @@
 #include <iostream>
-#include "Jogo.h"
+#include "Coord.h"
 
 
 
 int main() {
 
 	// Variavel do tipo Jogo
-	Jogo gear;
-	Jogo doom;
-
-	// Chamando metodos
-	gear.adquirir("Gears", 75);
-	gear.jogar(5);
-	gear.exibir();
-	std::cout << "Mem. : " << &gear << std::endl;
-
-	std::cout << "----------------------------------\n";
-
-	doom.adquirir("Doom", 90);
-	doom.jogar(3);
-	doom.exibir();
-	std::cout << "Mem. : " << &doom << std::endl;
+	Coord ponto;
+	ponto.MoveTo(10, 10);
 
 	return 0;
 }
