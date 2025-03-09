@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Orientado.cpp">
+    <ClCompile Include="Pontos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Jogo.cpp">
+    <ClCompile Include="Coord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Jogo.h">
+    <ClInclude Include="Coord.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
