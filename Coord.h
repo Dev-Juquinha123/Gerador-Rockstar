@@ -1,9 +1,9 @@
 #pragma once
 class Coord
 {
-public:
-	int x;
-	int y;
+private:
+	int x = 0;
+	int y = 0;
 public:
 	void Translate(int dx, int dy);
 	void MoveTo(int px, int py);
