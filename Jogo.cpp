@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Jogo.h"
 
+
 void Jogo::adquirir(const std::string& titulo, float valor)
 {
 	nome = titulo;
