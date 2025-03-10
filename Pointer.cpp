@@ -2,6 +2,12 @@
 #include <iostream>
 #include "Pointer.h"
 
+Point::Point()
+{
+	x = 0;
+	y = 0;
+}
+
 void Point::MoveTo(int px, int py) // Recebe as novas coordenadas x e y serao movidos
 {
 	x = px;  // Atualiza a posição X
@@ -16,9 +22,3 @@ void Point::Translate(int dx, int dy) // Quanto queremos mover o ponto
 	x += dx;  // Move o ponto horizontalmente
 	y += dy;  // Move o ponto verticalmente
 }
-
-//void Point::showvalues()
-//{
-//	// Mostrando valores privados usando metodos
-//	std::cout << "Verify value: x" << x << " y " << y;
-//}
