@@ -4,7 +4,7 @@ class Point
 {
 public:
     int x, y;
-    Point(int ax = 0, int ay = 0) : x(ax), y(ay) {}
+    // Point(int ax = 0, int ay = 0) : x(ax), y(ay) {}
 
     // Sobrecarga do operador += para mover o ponto
     void operator+=(const Point& p) {
