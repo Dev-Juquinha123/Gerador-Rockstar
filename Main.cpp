@@ -1,21 +1,18 @@
 #include <iostream>
-#include "Pointer.h"
+#include "Rect.h"
 
 
 int main()
 {
-	Point square;
-	// Move valor inicial 50 / 50
-	square.MoveTo(50, 50);
+    Rect r;
 
-	std::cout << " x " << square.getX();
-	std::cout << " y " << square.getY();
-	std::cout << std::endl;
+    // Cria o retângulo com coordenadas (0, 0) e (10, 10)
+    r.Create(0, 0, 10, 10);
+    r.Print();  // Mostra as coordenadas dos pontos
 
-	// Move para nova posicao sem alterar valor anterior
-	square.Translate(5, 15);
+    // Mover o retângulo
+    r.Translate(5, 5);  // Move os pontos para a direita e para cima
+    r.Print();  // Mostra as novas coordenadas dos pontos
 
-	std::cout << " x " << square.getX();
-	std::cout << " y " << square.getY();
 
 }
