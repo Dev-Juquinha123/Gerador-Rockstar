@@ -2,19 +2,19 @@
 #include <iostream>
 #include "Point.h"
 
-class Rect
-{
-public:
-
-	void Create(int ax, int ay, int bx, int by);
-	void Translate(int dx, int dy);
-	void Print() const;
-
-	
+class Rect {
 private:
-	// Ao inves de ja declarar aqui declara em outra classe (Point)
-	Point a;  // Ponto A (x, y)
-	Point b;  // Ponto B (x, y)
+    int x1, y1, x2, y2;
+    bool valid;
 
+public:
+    Rect();
+    void Create(int x1, int y1, int x2, int y2);
+    void Print() const;
+    void Translate(int dx, int dy);
+    void Scale(double factor);
+    int GetArea() const;
+    bool IsValid() const;
 };
+
 
