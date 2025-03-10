@@ -29,6 +29,7 @@ int main()
 
 
     std::cout << std::endl;
+
     // Redimensionando o retângulo
     r.Scale(2); // Dobra o tamanho
     std::cout << "Após escalonamento (x2):\n";
