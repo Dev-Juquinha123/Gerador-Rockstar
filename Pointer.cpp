@@ -17,8 +17,8 @@ void Point::Translate(int dx, int dy) // Quanto queremos mover o ponto
 	y += dy;  // Move o ponto verticalmente
 }
 
-void Point::showvalues()
-{
-	// Mostrando valores privados usando metodos
-	std::cout << "Verify value: x" << x << " y " << y;
-}
+//void Point::showvalues()
+//{
+//	// Mostrando valores privados usando metodos
+//	std::cout << "Verify value: x" << x << " y " << y;
+//}
