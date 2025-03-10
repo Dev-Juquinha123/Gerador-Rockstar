@@ -13,6 +13,7 @@ int main()
         return 1;
     }
 
+
     std::cout << "Retângulo inicial:\n";
     r.Print();
     std::cout << "Área: " << r.GetArea() << "\n\n";
