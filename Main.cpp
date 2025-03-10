@@ -13,6 +13,7 @@ int main()
     // Mover o retângulo
     r.Translate(5, 5);  // Move os pontos para a direita e para cima
     r.Print();  // Mostra as novas coordenadas dos pontos
+    std::cout << std::endl;
 
 
 }
