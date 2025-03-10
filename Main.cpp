@@ -30,5 +30,6 @@ int main()
     r.Print();
     std::cout << "Área: " << r.GetArea() << "\n\n";
 
+
     return 0;
 }
