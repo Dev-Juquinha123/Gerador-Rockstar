@@ -15,5 +15,6 @@ private:
 	// Ao inves de ja declarar aqui declara em outra classe (Point)
 	Point a;  // Ponto A (x, y)
 	Point b;  // Ponto B (x, y)
+
 };
 
