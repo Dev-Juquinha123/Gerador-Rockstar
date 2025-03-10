@@ -5,6 +5,8 @@ int main()
 {
     Rect r;
 
+
+
     // Criando um retângulo com coordenadas (0,0) e (10,10)
     r.Create(0, 0, 10, 10);
 
@@ -23,6 +25,8 @@ int main()
     std::cout << "Após a translação:\n";
     r.Print();
     std::cout << "Área: " << r.GetArea() << "\n\n";
+
+
 
     std::cout << std::endl;
     // Redimensionando o retângulo
