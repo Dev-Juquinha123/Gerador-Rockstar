@@ -30,8 +30,10 @@ void Jogo::atualizar(float valor)
 
 void Jogo::jogar(int tempo)
 {
-    horas = horas + tempo;
-    calcular();
+    if (horas > 0) {
+        horas = horas + tempo;
+        calcular();
+    }
 }
 
 void Jogo::exibir()

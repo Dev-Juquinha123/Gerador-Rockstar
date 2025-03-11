@@ -12,7 +12,7 @@ class Jogo
 private:
 	string nome;                                        // nome do jogo
 	float preco;                                        // preço do jogo
-	int horas = 1;                                      // quantidade de horas jogadas
+	int horas;                                      // quantidade de horas jogadas
 	float custo;                                        // valor por hora jogada
 
 	void calcular();                                    // calcular custo da hora jogada
