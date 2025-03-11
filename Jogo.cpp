@@ -10,11 +10,15 @@ Jogo::Jogo(const string& titulo, float valor, int tempo)
 {
     nome = titulo;
     preco = valor;
-    if (tempo > 0 )
+    if (tempo > 0)
     {
         horas = tempo;
     }
-   
+    else
+    {
+        cout << "Valor invalido inicie jogo com tempo de jogo!";
+    }
+    
     custo = preco;
 }
 
@@ -34,11 +38,13 @@ void Jogo::exibir()
 {
     cout << fixed;
     cout.precision(2);
-
-    cout << nome << " R$"
-        << preco << " "
-        << horas << "h = R$"
-        << custo << "/h\n";
+    if (horas > 0) {
+        cout << nome << " R$"
+            << preco << " "
+            << horas << "h = R$"
+            << custo << "/h\n";
+    }
+   
 }
 
 // -----------------------------------------------
