@@ -4,7 +4,9 @@
 int main()
 {
     Rect r;
+    Rect as;
 
+    std::cout << &as << std::endl;
 
 
     // Criando um retângulo com coordenadas (0,0) e (10,10)
