@@ -6,11 +6,15 @@ using namespace std;
 // Definição da Classe Jogo
 // -----------------------------------------------
 
-Jogo::Jogo(const string& titulo, float valor)
+Jogo::Jogo(const string& titulo, float valor, int tempo)
 {
     nome = titulo;
     preco = valor;
-    horas = 0;
+    if (tempo > 0 )
+    {
+        horas = tempo;
+    }
+   
     custo = preco;
 }
 

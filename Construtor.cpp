@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	// objeto da classe Jogo
-	Jogo gta = Jogo("Grand Theft Auto", 90.0f);
+	Jogo gta = Jogo("Grand Theft Auto", 90.0f, 10);
 
 	// chamando métodos
 	gta.atualizar(100.0f);
