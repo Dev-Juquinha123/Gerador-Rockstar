@@ -2,39 +2,13 @@
 #include <iostream>
 using namespace std;
 
-// -----------------------------------------------
-// Definição da Classe Jogo
-// -----------------------------------------------
-
-Jogo::Jogo(const string& titulo, float valor)
+int main()
 {
-    nome = titulo;
-    preco = valor;
-    horas = 0;
-    custo = preco;
+	// objeto da classe Jogo
+	Jogo gta = Jogo("Grand Theft Auto", 90.0f);
+
+	// chamando métodos
+	gta.atualizar(100.0f);
+	gta.jogar(2);
+	gta.exibir();
 }
-
-void Jogo::atualizar(float valor)
-{
-    preco = valor;
-    calcular();
-}
-
-void Jogo::jogar(int tempo)
-{
-    horas = horas + tempo;
-    calcular();
-}
-
-void Jogo::exibir()
-{
-    cout << fixed;
-    cout.precision(2);
-
-    cout << nome << " R$"
-        << preco << " "
-        << horas << "h = R$"
-        << custo << "/h\n";
-}
-
-// -----------------------------------------------
