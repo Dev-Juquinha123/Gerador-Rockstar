@@ -20,6 +20,7 @@ Jogo::Jogo(const string& titulo, float valor, int tempo)
     }
     
     custo = preco;
+    calcular();
 }
 
 void Jogo::atualizar(float valor)
