@@ -15,9 +15,12 @@ private:
 	float percentual;
 };
 
-//
+// Construtor padroa
 Atleta::Atleta()
 {
+	acertos = 0;
+	tentativas = 0;
+	percentual = 0;
 }
 
 
