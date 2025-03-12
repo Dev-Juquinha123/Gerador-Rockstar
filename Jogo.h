@@ -4,8 +4,9 @@ using std::string;
 class Atleta
 {
 public:
-	// Construtor & Destrutor
-	Atleta();
+	// Construtores e Destrutor
+	Atleta(); // Construtor padrão
+	Atleta(int acertos_, int tentativas_); // Construtor com argumentos
 	~Atleta();
 
 private:
@@ -15,15 +16,24 @@ private:
 	float percentual;
 };
 
-// Construtor padroa
-Atleta::Atleta()
-{
+// Construtor padrão
+Atleta::Atleta() {
 	acertos = 0;
 	tentativas = 0;
-	percentual = 0;
+	percentual = 0.0f;
 }
 
+// Construtor com argumentos
+Atleta::Atleta(int acertos_, int tentativas_) {
+	acertos = acertos_;
+	tentativas = tentativas_;
+	if (tentativas != 0)
+		percentual = (float(acertos) / tentativas) * 100.0f;
+	else
+		percentual = 0.0f;
+}
 
-Atleta::~Atleta()
-{
+// Destrutor
+Atleta::~Atleta() {
+	// Nada a liberar neste exemplo
 }
