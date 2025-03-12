@@ -20,7 +20,7 @@ private:
     float percentual;
 
     // Método auxiliar
-    void calcular();
+    inline void calcular();
 };
 
 // Função externa (prototipada aqui)

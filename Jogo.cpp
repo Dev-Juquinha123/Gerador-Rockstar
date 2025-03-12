@@ -20,7 +20,7 @@ Atleta::~Atleta() {
 }
 
 // Função privada de cálculo
-void Atleta::calcular() {
+inline void Atleta::calcular() {
     if (tentativas != 0)
         percentual = 100.0f * acertos / tentativas;
     else
