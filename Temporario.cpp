@@ -1,14 +1,16 @@
 #include "Jogo.h"
 
 int main() {
-    Atleta a1(8, 10);
-    Atleta a2(7, 10);
-    Atleta total;
+    Atleta rick(13, 14);
+    Atleta john(10, 16);
+    Atleta mark(7, 9);
+    Atleta time;
 
-    acumular(total, a1);
-    acumular(total, a2);
+    acumular(time, rick);
+    acumular(time, john);
+    acumular(time, mark);
 
-    total.exibir();
+    time.exibir();
 
     return 0;
 }
