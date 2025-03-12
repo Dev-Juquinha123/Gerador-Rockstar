@@ -8,6 +8,7 @@ public:
 	Atleta(); // Construtor padrão
 	Atleta(int acertos_, int tentativas_); // Construtor com argumentos
 	~Atleta();
+	void exibir() const;
 private:
 	// Atributos
 	int acertos;
@@ -46,9 +47,9 @@ inline void Atleta::calcular() {
 		percentual = 0.0f;
 }
 
-void exibir(const Atleta& atl)
+void Atleta::exibir() const
 {
-	std::cout << "Acertos: " << atl.acertos << "  ";
-	std::cout << "Tentativas: " << atl.tentativas << "  ";
-	std::cout << " Percentual: " << atl.percentual << "\n";
+	std::cout << "Acertos: " << acertos << "  ";
+	std::cout << "Tentativas: " << tentativas << "  ";
+	std::cout << "Percentual: " << percentual << "%\n";
 }
