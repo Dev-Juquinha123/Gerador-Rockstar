@@ -1,4 +1,5 @@
 #include "Jogo.h"
+#include <iostream>
 
 // Construtor padrão
 Atleta::Atleta() {
@@ -32,7 +33,7 @@ void Atleta::exibir() const {
     std::cout << "Acertos: " << acertos << "  ";
     std::cout << "Tentativas: " << tentativas << "  ";
     std::cout << std::fixed;
-    std::cout.precision(2);
+    std::cout.precision(1);
     std::cout << "Percentual: " << percentual << "%\n";
     std::cout << std::endl;
 }
