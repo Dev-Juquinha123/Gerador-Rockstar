@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Jogo.h"
 
 int main() {
@@ -11,6 +12,6 @@ int main() {
     acumular(time, mark);
 
     time.exibir();
-
+    std::cout << std::endl;
     return 0;
 }
