@@ -31,6 +31,8 @@ inline void Atleta::calcular() {
 void Atleta::exibir() const {
     std::cout << "Acertos: " << acertos << "  ";
     std::cout << "Tentativas: " << tentativas << "  ";
+    std::cout << std::fixed;
+    std::cout.precision(2);
     std::cout << "Percentual: " << percentual << "%\n";
 }
 
