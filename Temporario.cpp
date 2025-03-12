@@ -1,9 +1,14 @@
 #include "Jogo.h"
-#include <iostream>
 
+int main() {
+    Atleta a1(8, 10);
+    Atleta a2(7, 10);
+    Atleta total;
 
-int main()
-{
+    acumular(total, a1);
+    acumular(total, a2);
 
-	return 0;
+    total.exibir();
+
+    return 0;
 }
