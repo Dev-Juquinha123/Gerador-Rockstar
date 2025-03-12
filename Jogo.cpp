@@ -26,6 +26,7 @@ Jogo::Jogo(const string& titulo, float valor)
 Jogo::~Jogo()
 {
     cout << "Destruindo objeto " << nome << "\n";
+    cout << endl;
 }
 
 void Jogo::atualizar(float valor)
