@@ -40,7 +40,7 @@ void Jogo::jogar(int tempo)
     calcular();
 }
 
-void Jogo::exibir()
+void Jogo::exibir() const
 {
     cout << fixed;
     cout.precision(2);

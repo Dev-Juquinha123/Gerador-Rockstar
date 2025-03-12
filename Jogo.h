@@ -22,7 +22,7 @@ public:
 
 	void atualizar(float valor);                        // atualizar preço do jogo
 	void jogar(int tempo);                              // registrar horas jogadas
-	void exibir();                                      // mostrar informações
+	void exibir() const;                                      // mostrar informações
 };
 
 // -----------------------------------------------
