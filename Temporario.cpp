@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-	Jogo sackboy = Jogo("Sackboy", 150.0f);
-	Jogo spiderman = Jogo("Spiderman", 200.0f);
-	Jogo horizon = Jogo("Horizon", 199.0f);
+	Jogo ratchet = Jogo("Ratchet & Clank", 150.0f);
+	ratchet.atualizar(125.0f);
+	ratchet.jogar(5);
+	ratchet.exibir();
 }
