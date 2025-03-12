@@ -1,5 +1,5 @@
-#include <string>
-using std::string;
+#pragma once
+
 
 class Atleta
 {
@@ -8,12 +8,12 @@ public:
 	Atleta(); // Construtor padrão
 	Atleta(int acertos_, int tentativas_); // Construtor com argumentos
 	~Atleta();
-
 private:
 	// Atributos
 	int acertos;
 	int tentativas;
 	float percentual;
+	inline void calcular();
 };
 
 // Construtor padrão
@@ -36,4 +36,12 @@ Atleta::Atleta(int acertos_, int tentativas_) {
 // Destrutor
 Atleta::~Atleta() {
 	// Nada a liberar neste exemplo
+}
+
+// Função inline
+inline void Atleta::calcular() {
+	if (tentativas != 0)
+		percentual = 100.0f * acertos / tentativas;
+	else
+		percentual = 0.0f;
 }

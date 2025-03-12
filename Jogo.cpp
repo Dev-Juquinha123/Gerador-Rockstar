@@ -1,13 +1,6 @@
 #include "Jogo.h"
 #include <iostream>
 
-void calcular(Atleta& atl)
-{
-	if (atl.tentativas != 0)
-		atl.percentual = 100.0f * atl.acertos / atl.tentativas;
-	else
-		atl.percentual = 0
-}
 
 void exibir(const Atleta& atl)
 {
