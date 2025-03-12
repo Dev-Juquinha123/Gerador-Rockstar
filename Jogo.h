@@ -45,3 +45,10 @@ inline void Atleta::calcular() {
 	else
 		percentual = 0.0f;
 }
+
+void exibir(const Atleta& atl)
+{
+	std::cout << "Acertos: " << atl.acertos << "  ";
+	std::cout << "Tentativas: " << atl.tentativas << "  ";
+	std::cout << " Percentual: " << atl.percentual << "\n";
+}
