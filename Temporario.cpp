@@ -6,6 +6,7 @@ int main() {
     Atleta atletaRick(13, 14);
     Atleta atletaJohn(10, 16);
     Atleta atletaMark(7, 9);
+    Atleta atletaOliver(8, 12);
 
     // Criando um objeto Atleta que armazenará os totais acumulados
     Atleta totalTime;
@@ -14,6 +15,7 @@ int main() {
     acumular(totalTime, atletaRick);
     acumular(totalTime, atletaJohn);
     acumular(totalTime, atletaMark);
+    acumular(totalTime, atletaOliver);
 
     // Exibindo os dados acumulados da equipe
     totalTime.exibir();
