@@ -2,25 +2,16 @@
 #include "Jogo.h"
 
 int main() {
-    // Criando atletas com seus respectivos pontos e assistências
-    Atleta atletaRick(13, 14);
-    Atleta atletaJohn(10, 16);
-    Atleta atletaMark(7, 9);
-    Atleta atletaOliver(8, 12);
+    Atleta rick(13, 14);
+    Atleta john(10, 16);
+    Atleta mark(7, 9);
+    Atleta time;
 
-    // Criando um objeto Atleta que armazenará os totais acumulados
-    Atleta totalTime;
+    acumular(time, rick);
+    acumular(time, john);
+    acumular(time, mark);
 
-    // Acumulando os dados de cada atleta no total da equipe
-    acumular(totalTime, atletaRick);
-    acumular(totalTime, atletaJohn);
-    acumular(totalTime, atletaMark);
-    acumular(totalTime, atletaOliver);
-
-
-    // Exibindo os dados acumulados da equipe
-    totalTime.exibir();
-
+    time.exibir();
     std::cout << std::endl;
     return 0;
 }
