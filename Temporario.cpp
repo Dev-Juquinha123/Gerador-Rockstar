@@ -17,6 +17,7 @@ int main() {
     acumular(totalTime, atletaMark);
     acumular(totalTime, atletaOliver);
 
+
     // Exibindo os dados acumulados da equipe
     totalTime.exibir();
 
