@@ -18,6 +18,7 @@ Atleta::Atleta(int acertos_, int tentativas_) {
 // Destrutor
 Atleta::~Atleta() {
     // Nada a liberar neste exemplo
+    // Liberar memoria alocada
 }
 
 // Função privada de cálculo
