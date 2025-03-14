@@ -7,6 +7,7 @@ Atleta::Atleta() {
     tentativas = 0;
     percentual = 0.0f;
     std::cout << "Construtor";
+
 }
 
 // Construtor com argumentos
