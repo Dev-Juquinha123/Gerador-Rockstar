@@ -17,10 +17,6 @@ int main() {
     acumular(time, john);
     acumular(time, mark);
     acumular(time, lucas);
-    acumular(time, ana);
-    acumular(time, carla);
-    acumular(time, pedro);
-    acumular(time, julia);
 
     
     // Exibindo os dados acumulados da equipe
