@@ -7,10 +7,7 @@ int main() {
     Atleta john(10, 16);
     Atleta mark(7, 9);
     Atleta lucas(12, 11);
-    Atleta ana(15, 13);
-    Atleta carla(8, 10);
-    Atleta pedro(9, 7);
-    Atleta julia(11, 12);
+
 
     // Criando um objeto Atleta que armazenará os totais acumulados
     Atleta time;
