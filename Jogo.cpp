@@ -39,6 +39,7 @@ void Atleta::exibir() const {
     std::cout << std::endl;
 }
 
+
 // Função amiga
 Atleta& acumular(Atleta& soma, const Atleta& atl) {
     // Calculos
