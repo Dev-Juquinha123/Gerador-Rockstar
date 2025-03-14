@@ -19,6 +19,7 @@ int main() {
     acumular(time, lucas);
 
     
+
     // Exibindo os dados acumulados da equipe
     time.exibir();
 
