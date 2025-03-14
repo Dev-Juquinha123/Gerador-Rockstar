@@ -19,6 +19,7 @@ Atleta::Atleta(int acertos_, int tentativas_) {
 Atleta::~Atleta() {
     // Nada a liberar neste exemplo
     // Liberar memoria alocada
+    std::cout << "Destrutor chamado";
 }
 
 // Função privada de cálculo
