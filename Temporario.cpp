@@ -22,6 +22,7 @@ int main() {
     acumular(time, rony);
     acumular(time, tom);
 
+
     // Exibindo os dados acumulados da equipe
     time.exibir();
 
