@@ -1,5 +1,13 @@
+// ===============================================
+// Arquivo: Jogo.cpp
+// Descrição: Implementação dos métodos da classe Atleta,
+// responsável por armazenar e exibir informações de desempenho
+// de um jogador.
+// ===============================================
+
 #include "Jogo.h"
 #include <iostream>
+
 
 // Construtor padrão
 Atleta::Atleta() {
