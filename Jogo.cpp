@@ -47,7 +47,7 @@ void Atleta::exibir() const {
     std::cout << std::fixed;
     std::cout.precision(1);
     std::cout << "Percentual: " << percentual << "%\n";
-    std::cout << std::endl;
+    std::cout << "-----------------------------\n\n";
 }
 
 
