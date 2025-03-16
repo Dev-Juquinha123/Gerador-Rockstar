@@ -74,3 +74,8 @@ void Atleta::adicionarTentativa(bool acertou) {
     if (acertou) ++acertos;
     calcular();
 }
+
+bool Atleta::possuiDesempenhoSuperior(const Atleta& outro) const {
+    return percentual > outro.percentual;
+}
+

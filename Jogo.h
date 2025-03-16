@@ -52,6 +52,9 @@ public:
             percentual = 0.0f;
     }
 
+    /// Verifica se o atleta atual tem desempenho superior a outro.
+    bool possuiDesempenhoSuperior(const Atleta& outro) const;
+
 private:
     /// Atributos
     int acertos = 0;
