@@ -37,6 +37,4 @@ private:
     inline void calcular();
 };
 
-// Função externa (prototipada aqui)
-Atleta& acumular(Atleta& soma, const Atleta& atl);
 #endif // JOGO_H
