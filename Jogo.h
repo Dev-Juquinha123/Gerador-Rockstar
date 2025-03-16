@@ -1,5 +1,13 @@
+// ===============================================
+// Arquivo: Jogo.h
+// Descrição: Declaração da classe Atleta, que representa
+// um jogador com número de acertos, tentativas e cálculo
+// do percentual de aproveitamento.
+// ===============================================
+
 #pragma once
 #include <iostream>
+
 
 class Atleta {
 public:
