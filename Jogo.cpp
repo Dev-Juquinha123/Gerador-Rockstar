@@ -61,3 +61,8 @@ float Atleta::getPercentual() const {
     return percentual;
 }
 
+int Atleta::getAcertos() const {
+    return acertos;
+}
+
+

@@ -36,6 +36,8 @@ public:
     friend Atleta& acumular(Atleta& soma, const Atleta& atl);
 
   
+    /// Retorna o número de acertos.
+    int getAcertos() const;
 
 
 private:
