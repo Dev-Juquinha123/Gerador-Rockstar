@@ -8,6 +8,8 @@
 #pragma once
 #include <iostream>
 
+#ifndef JOGO_H
+#define JOGO_H
 
 class Atleta {
 public:
@@ -33,3 +35,4 @@ private:
 
 // Função externa (prototipada aqui)
 Atleta& acumular(Atleta& soma, const Atleta& atl);
+#endif // JOGO_H
