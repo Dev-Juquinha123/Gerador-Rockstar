@@ -11,7 +11,7 @@
 
 // Construtor padrão
 Atleta::Atleta() : acertos(0), tentativas(0), percentual(0.0f) {
-    std::cout << "Construtor";
+    std::cout << "Construtor\n";
 }
 
 
