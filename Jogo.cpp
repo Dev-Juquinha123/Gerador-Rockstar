@@ -66,3 +66,7 @@ void Atleta::resetar() {
     percentual = 0.0f;
 }
 
+float Atleta::getPercentual() const {
+    return percentual;
+}
+

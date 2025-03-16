@@ -13,6 +13,10 @@
 class Atleta {
 public:
 
+    /// Retorna o percentual de acerto.
+    float getPercentual() const;
+
+
     /// Reseta os dados do atleta para zero.
     void resetar();
 
