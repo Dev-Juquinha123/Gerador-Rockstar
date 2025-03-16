@@ -16,11 +16,11 @@ Atleta::Atleta() : acertos(0), tentativas(0), percentual(0.0f) {
 
 
 // Construtor com argumentos
-Atleta::Atleta(int acertos_, int tentativas_) {
-    acertos = acertos_;
-    tentativas = tentativas_;
+Atleta::Atleta(int acertos_, int tentativas_)
+    : acertos(acertos_), tentativas(tentativas_), percentual(0.0f) {
     calcular();
 }
+
 
 // Destrutor
 Atleta::~Atleta() {
