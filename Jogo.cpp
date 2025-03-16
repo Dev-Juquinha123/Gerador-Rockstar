@@ -10,13 +10,10 @@
 
 
 // Construtor padrão
-Atleta::Atleta() {
-    acertos = 0;
-    tentativas = 0;
-    percentual = 0.0f;
+Atleta::Atleta() : acertos(0), tentativas(0), percentual(0.0f) {
     std::cout << "Construtor";
-
 }
+
 
 // Construtor com argumentos
 Atleta::Atleta(int acertos_, int tentativas_) {
