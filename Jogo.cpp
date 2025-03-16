@@ -69,4 +69,8 @@ int Atleta::getTentativas() const {
     return tentativas;
 }
 
-
+void Atleta::adicionarTentativa(bool acertou) {
+    ++tentativas;
+    if (acertou) ++acertos;
+    calcular();
+}

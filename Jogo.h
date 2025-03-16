@@ -42,6 +42,15 @@ public:
     /// Retorna o número de tentativas.
     int getTentativas() const;
 
+    /// Registra uma tentativa, com acerto ou erro.
+    void adicionarTentativa(bool acertou);
+
+    inline void calcular() {
+        if (tentativas != 0)
+            percentual = 100.0f * acertos / tentativas;
+        else
+            percentual = 0.0f;
+    }
 
 private:
     /// Atributos
@@ -50,12 +59,7 @@ private:
     float percentual;
 
     /// Método auxiliar para cálculo do percentual.
-    inline void calcular() {
-        if (tentativas != 0)
-            percentual = 100.0f * acertos / tentativas;
-        else
-            percentual = 0.0f;
-    }
+   
 
 };
 
