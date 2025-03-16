@@ -65,4 +65,8 @@ int Atleta::getAcertos() const {
     return acertos;
 }
 
+int Atleta::getTentativas() const {
+    return tentativas;
+}
+
 

@@ -39,6 +39,9 @@ public:
     /// Retorna o número de acertos.
     int getAcertos() const;
 
+    /// Retorna o número de tentativas.
+    int getTentativas() const;
+
 
 private:
     /// Atributos
