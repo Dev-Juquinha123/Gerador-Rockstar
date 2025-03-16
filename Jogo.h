@@ -54,9 +54,10 @@ public:
 
 private:
     /// Atributos
-    int acertos;
-    int tentativas;
-    float percentual;
+    int acertos = 0;
+    int tentativas = 0;
+    float percentual = 0.0f;
+
 
     /// Método auxiliar para cálculo do percentual.
    
