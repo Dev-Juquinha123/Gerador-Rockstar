@@ -59,3 +59,10 @@ Atleta& acumular(Atleta& soma, const Atleta& atl) {
     soma.calcular();
     return soma;
 }
+
+void Atleta::resetar() {
+    acertos = 0;
+    tentativas = 0;
+    percentual = 0.0f;
+}
+

@@ -12,6 +12,10 @@
 
 class Atleta {
 public:
+
+    /// Reseta os dados do atleta para zero.
+    void resetar();
+
     /// Construtor padrão: inicializa acertos, tentativas e percentual.
     Atleta();
 
@@ -26,6 +30,9 @@ public:
 
     /// Função amiga que acumula os dados de dois atletas.
     friend Atleta& acumular(Atleta& soma, const Atleta& atl);
+
+  
+
 
 private:
     /// Atributos
