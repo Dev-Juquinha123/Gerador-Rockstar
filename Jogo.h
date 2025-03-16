@@ -28,13 +28,13 @@ public:
     friend Atleta& acumular(Atleta& soma, const Atleta& atl);
 
 private:
-    // Atributos
+    /// Atributos
     int acertos;
     int tentativas;
     float percentual;
 
-    // Método auxiliar
+    /// Método auxiliar
     inline void calcular();
 };
 
-#endif // JOGO_H
+#endif /// JOGO_H
