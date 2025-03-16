@@ -12,14 +12,19 @@
 
 class Atleta {
 public:
-    // Construtores e Destrutor
-    Atleta(); // Construtor padrão
-    Atleta(int acertos_, int tentativas_); // Construtor com argumentos
+    /// Construtor padrão: inicializa acertos, tentativas e percentual.
+    Atleta();
+
+    /// Construtor com parâmetros para acertos e tentativas.
+    Atleta(int acertos_, int tentativas_);
+
+    /// Destrutor da classe Atleta.
     ~Atleta();
 
+    /// Exibe os dados do atleta no console.
     void exibir() const;
 
-    // Função amiga
+    /// Função amiga que acumula os dados de dois atletas.
     friend Atleta& acumular(Atleta& soma, const Atleta& atl);
 
 private:
