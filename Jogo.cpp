@@ -23,8 +23,6 @@ Atleta::Atleta(int acertos_, int tentativas_)
     calcular();
 }
 
-
-
 // Destrutor
 Atleta::~Atleta() {
     // Nada a liberar neste exemplo
@@ -32,13 +30,6 @@ Atleta::~Atleta() {
     std::cout << "Destrutor chamado";
 }
 
-// Função privada de cálculo
-inline void Atleta::calcular() {
-    if (tentativas != 0)
-        percentual = 100.0f * acertos / tentativas;
-    else
-        percentual = 0.0f;
-}
 
 // Exibir dados
 void Atleta::exibir() const {

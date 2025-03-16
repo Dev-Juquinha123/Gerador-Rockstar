@@ -44,8 +44,14 @@ private:
     int tentativas;
     float percentual;
 
-    /// Método auxiliar
-    inline void calcular();
+    /// Método auxiliar para cálculo do percentual.
+    inline void calcular() {
+        if (tentativas != 0)
+            percentual = 100.0f * acertos / tentativas;
+        else
+            percentual = 0.0f;
+    }
+
 };
 
 #endif /// JOGO_H
