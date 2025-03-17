@@ -26,14 +26,6 @@ Jogo::~Jogo()
 {
 }
 
-const Jogo& Jogo::comparar(const Jogo& jogo) const
-{
-    if (jogo.horas > horas)
-        return jogo;
-    else
-        return *this;
-}
-
 
 void Jogo::atualizar(float valor)
 {
