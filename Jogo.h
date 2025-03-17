@@ -14,9 +14,9 @@ private:
 	float custo;									// valor por hora jogada
 
 	void calcular();								// calcular custo da hora jogada
-	float rpreco();
-	int rhoras();
-	float rcusto();
+	float rpreco(Jogo& jogo);
+	int rhoras(Jogo& jogo);
+	float rcusto(Jogo& jogo);
 
 public:
 	Jogo();											// construtor padrão
@@ -40,18 +40,18 @@ inline void Jogo::calcular()
 		custo = preco / horas;
 }
 
-inline float Jogo::rpreco()
+inline float Jogo::rpreco(Jogo& jogo)
 {
-	return preco;
+	return jogo.preco;
 }
-inline int Jogo::rhoras()
+inline int Jogo::rhoras(Jogo& jogo)
 {
-	return horas;
+	return jogo.horas;
 }
 
-inline float Jogo::rcusto()
+inline float Jogo::rcusto(Jogo& jogo)
 {
-	return custo;
+	return jogo.custo;
 }
 
 
