@@ -1,6 +1,5 @@
 #include "Jogo.h"
 #include <iostream>
-using namespace std;
 
 // -----------------------------------------------
 // Definição da Classe Jogo

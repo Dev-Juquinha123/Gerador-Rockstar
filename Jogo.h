@@ -1,5 +1,5 @@
 #include <string>
-using std::string;
+
 
 // -----------------------------------------------
 // Declaração da Classe Jogo
@@ -8,52 +8,68 @@ using std::string;
 class Jogo
 {
 private:
-	string nome;									// nome do jogo
-	float preco;									// preço do jogo
-	int horas;										// quantidade de horas jogadas
-	float custo;									// valor por hora jogada
+    string nome;     // Nome do jogo
+    float preco;     // Preço do jogo
+    int horas;       // Quantidade de horas jogadas
+    float custo;     // Valor por hora jogada
 
-	void calcular();								// calcular custo da hora jogada
-	float rpreco(Jogo& jogo);
-	int rhoras(Jogo& jogo);
-	float rcusto(Jogo& jogo);
+    void calcular(); // Calcular custo da hora jogada
 
 public:
-	Jogo();											// construtor padrão
-	Jogo(const string& titulo,						// construtor da classe
-		float valor = 0,
-		int tempo = 0);
-	~Jogo();										// destrutor
+    Jogo(); // Construtor padrão
+    Jogo(const string& titulo, float valor = 0, int tempo = 0);
+    ~Jogo(); // Destrutor
 
-	void atualizar(float valor);					// atualizar preço do jogo
-	void jogar(int tempo);							// registrar horas jogadas
-	void exibir() const;							// mostrar informações
+    void atualizar(float valor); // Atualizar preço do jogo
+    void jogar(int tempo);       // Registrar horas jogadas
+    void exibir() const;         // Mostrar informações
+
+    // Métodos inline para retornar valores
+    inline float rpreco() const { return preco; }
+    inline int rhoras() const { return horas; }
+    inline float rcusto() const { return custo; }
+    inline string rnome() const { return nome; }
 };
 
-// -----------------------------------------------
-// Métodos Inline
-// -----------------------------------------------
-
+// Implementação do método calcular
 inline void Jogo::calcular()
 {
-	if (horas > 0)
-		custo = preco / horas;
+    if (horas > 0)
+        custo = preco / horas;
+    else
+        custo = preco; // Caso tenha 0 horas, o custo será igual ao preço
 }
 
-inline float Jogo::rpreco(Jogo& jogo)
+// Implementação do construtor
+Jogo::Jogo(const string& titulo, float valor, int tempo)
+    : nome(titulo), preco(valor), horas(tempo), custo(0)
 {
-	return jogo.preco;
+    calcular();
 }
-inline int Jogo::rhoras(Jogo& jogo)
+
+// Implementação do destrutor
+Jogo::~Jogo() {}
+
+// Implementação do método atualizar preço
+void Jogo::atualizar(float valor)
 {
-	return jogo.horas;
+    preco = valor;
+    calcular();
 }
 
-inline float Jogo::rcusto(Jogo& jogo)
+// Implementação do método jogar (adicionar horas)
+void Jogo::jogar(int tempo)
 {
-	return jogo.custo;
+    horas += tempo;
+    calcular();
 }
 
-
-
+// Implementação do método exibir (mostrar informações do jogo)
+void Jogo::exibir() const
+{
+    cout << "Nome: " << nome << endl;
+    cout << "Preço: " << preco << endl;
+    cout << "Horas jogadas: " << horas << endl;
+    cout << "Custo por hora: " << custo << endl;
+}
 // -----------------------------------------------

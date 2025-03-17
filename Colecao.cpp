@@ -1,31 +1,48 @@
 #include <iostream>
 #include "Jogo.h"
-using namespace std;
+
 
 const int MAX = 3;
 
 int main()
 {
-    // vetor de objetos inicializados
-    Jogo colecao[MAX] =
-    {
-         Jogo("Gears", 90.0f, 30),
-         Jogo("Doom", 60.0f, 120),
-         Jogo("Halo", 80.0f, 40)
+    // Criando um vetor de objetos da classe Jogo
+    Jogo colecao[] = {
+        Jogo("Gears", 90.0f, 30),
+        Jogo("Doom", 60.0f, 120),
+        Jogo("Halo", 80.0f, 40)
     };
 
-    cout << "Coleção de Jogos:\n";
-    for (int i = 0; i < MAX; i++)
-        colecao[i].exibir();
+    int tamanho = sizeof(colecao) / sizeof(colecao[0]);
 
-    // aponta para primeiro elemento
-    const Jogo* top = &colecao[0];
+    // Variáveis auxiliares para armazenar os índices dos jogos desejados
+    int indiceMaisJogado = 0;
+    int indiceMenorCusto = 0;
+    int indiceMenorPreco = 0;
 
-    // compara com todos os elementos
-    for (int i = 1; i < MAX; i++)
-        top = &top->comparar(colecao[i]);
+    // Percorrer o vetor e encontrar os jogos desejados
+    for (int i = 1; i < tamanho; i++)
+    {
+        if (colecao[i].rhoras() > colecao[indiceMaisJogado].rhoras())
+            indiceMaisJogado = i;
 
-    // top aponta para o mais jogado
-    cout << "\nJogo mais jogado:\n";
-    top->exibir();
+        if (colecao[i].rcusto() < colecao[indiceMenorCusto].rcusto())
+            indiceMenorCusto = i;
+
+        if (colecao[i].rpreco() < colecao[indiceMenorPreco].rpreco())
+            indiceMenorPreco = i;
+    }
+
+    // Exibir os resultados
+    std::cout << "=== Jogo mais jogado ===" << std::endl;
+    colecao[indiceMaisJogado].exibir();
+    std::cout << "------------------------\n";
+
+    cout << "=== Jogo com menor custo por hora jogada ===" << std::endl;
+    colecao[indiceMenorCusto].exibir();
+    cout << "------------------------\n";
+
+    cout << "=== Jogo com menor preço ===" << std::endl;
+    colecao[indiceMenorPreco].exibir();
+    cout << "------------------------\n";
 }
