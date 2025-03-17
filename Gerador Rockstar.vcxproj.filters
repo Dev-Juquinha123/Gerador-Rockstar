@@ -18,7 +18,7 @@
     <ClCompile Include="Jogo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Temporario.cpp">
+    <ClCompile Include="Colecao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

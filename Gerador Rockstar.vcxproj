@@ -128,7 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Jogo.cpp" />
-    <ClCompile Include="Temporario.cpp" />
+    <ClCompile Include="Colecao.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Jogo.h" />
