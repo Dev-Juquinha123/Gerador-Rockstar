@@ -42,7 +42,7 @@ void Atleta::exibir() const {
 }
 
 
-// Função amiga
+/// Função amiga
 Atleta& acumular(Atleta& soma, const Atleta& atl) {
     // Calculos
     soma.acertos += atl.acertos;
