@@ -20,6 +20,7 @@ int main()
     int indiceMenorCusto = 0;
     int indiceMenorPreco = 0;
 
+
     // Percorrer o vetor e encontrar os jogos desejados
     for (int i = 1; i < tamanho; i++)
     {

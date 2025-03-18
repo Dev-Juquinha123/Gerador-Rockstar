@@ -24,7 +24,7 @@ public:
     void jogar(int tempo);       // Registrar horas jogadas
     void exibir() const;         // Mostrar informações
 
-    // Métodos inline para retornar valores
+    /// Métodos inline para retornar valores
     inline float rpreco() const { return preco; }
     inline int rhoras() const { return horas; }
     inline float rcusto() const { return custo; }
