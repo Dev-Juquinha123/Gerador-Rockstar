@@ -8,7 +8,7 @@
 class Jogo
 {
 private:
-    string nome;     // Nome do jogo
+    std::string nome;     // Nome do jogo
     float preco;     // Preço do jogo
     int horas;       // Quantidade de horas jogadas
     float custo;     // Valor por hora jogada
@@ -17,7 +17,7 @@ private:
 
 public:
     Jogo(); // Construtor padrão
-    Jogo(const string& titulo, float valor = 0, int tempo = 0);
+    Jogo(const std::string& titulo, float valor = 0, int tempo = 0);
     ~Jogo(); // Destrutor
 
     void atualizar(float valor); // Atualizar preço do jogo
@@ -28,7 +28,7 @@ public:
     inline float rpreco() const { return preco; }
     inline int rhoras() const { return horas; }
     inline float rcusto() const { return custo; }
-    inline string rnome() const { return nome; }
+    inline std::string rnome() const { return nome; }
 };
 
 // Implementação do método calcular
@@ -41,7 +41,7 @@ inline void Jogo::calcular()
 }
 
 // Implementação do construtor
-Jogo::Jogo(const string& titulo, float valor, int tempo)
+Jogo::Jogo(const std::string& titulo, float valor, int tempo)
     : nome(titulo), preco(valor), horas(tempo), custo(0)
 {
     calcular();
@@ -67,9 +67,9 @@ void Jogo::jogar(int tempo)
 // Implementação do método exibir (mostrar informações do jogo)
 void Jogo::exibir() const
 {
-    cout << "Nome: " << nome << endl;
-    cout << "Preço: " << preco << endl;
-    cout << "Horas jogadas: " << horas << endl;
-    cout << "Custo por hora: " << custo << endl;
+    std::cout << "Nome: " << nome << std::endl;
+    std::cout << "Preço: " << preco << std::endl;
+    std::cout << "Horas jogadas: " << horas << std::endl;
+    std::cout << "Custo por hora: " << custo << std::endl;
 }
 // -----------------------------------------------

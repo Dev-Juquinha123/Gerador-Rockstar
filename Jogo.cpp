@@ -12,7 +12,7 @@ Jogo::Jogo()
     horas = 0;
 }
 
-Jogo::Jogo(const string& titulo, float valor, int tempo)
+Jogo::Jogo(const std::string& titulo, float valor, int tempo)
 {
     nome = titulo;
     preco = valor;
@@ -40,10 +40,10 @@ void Jogo::jogar(int tempo)
 
 void Jogo::exibir() const
 {
-    cout << fixed;
-    cout.precision(2);
+    std::cout << std::fixed;
+    std::cout.precision(2);
 
-    cout << nome << " R$"
+    std::cout << nome << " R$"
         << preco << " "
         << horas << "h = R$"
         << custo << "/h\n";

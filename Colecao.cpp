@@ -10,7 +10,7 @@ int main()
     Jogo colecao[] = {
         Jogo("Gears", 90.0f, 30),
         Jogo("Doom", 60.0f, 120),
-        Jogo("Halo", 80.0f, 40)
+        Jogo("Halos", 80.0f, 40)
     };
 
     int tamanho = sizeof(colecao) / sizeof(colecao[0]);
@@ -38,11 +38,11 @@ int main()
     colecao[indiceMaisJogado].exibir();
     std::cout << "------------------------\n";
 
-    cout << "=== Jogo com menor custo por hora jogada ===" << std::endl;
+    std::cout << "=== Jogo com menor custo por hora jogada ===" << std::endl;
     colecao[indiceMenorCusto].exibir();
-    cout << "------------------------\n";
+    std::cout << "------------------------\n";
 
-    cout << "=== Jogo com menor preço ===" << std::endl;
+    std::cout << "=== Jogo com menor preço ===" << std::endl;
     colecao[indiceMenorPreco].exibir();
-    cout << "------------------------\n";
+    std::cout << "------------------------\n";
 }
