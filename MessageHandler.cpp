@@ -29,7 +29,7 @@ void MessageHandler::loadMessagesFromFile() {
             messages.push_back(line);
         }
         file.close();
-        std::cout << "Mensagens carregadas com sucesso!" << std::endl;
+        std::cout << "Total de mensagens carregadas: " << messages.size() << std::endl;
     }
     else {
         std::cout << "Nenhum arquivo encontrado!" << std::endl;
