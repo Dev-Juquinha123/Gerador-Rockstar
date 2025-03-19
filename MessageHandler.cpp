@@ -1,7 +1,10 @@
 #include "MessageHandler.h"
 #include <chrono>
 #include <thread>
-
+#include <fstream>
+#include <vector>
+#include <limits> // Para std::numeric_limits
+#include <string>
 
 // Função para imprimir uma mensagem várias vezes
 void MessageHandler::printMessage(const std::string& message, int count) {
