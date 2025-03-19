@@ -7,6 +7,7 @@ int main() {
 
     char option;
 
+    std::cout << "\n=================== MENU ===================\n";
     do {
         std::cout << "\nOpções:\n";
         std::cout << "1 - Imprimir mensagem\n";
