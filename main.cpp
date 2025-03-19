@@ -13,6 +13,7 @@ int main() {
         system("clear");
     #endif
 
+
     std::cout << "\n=================== MENU ===================\n";
     do {
         std::cout << "\nOpções:\n";

@@ -11,6 +11,7 @@ bool MessageHandler::fileExists(const std::string& filename) {
     return file.good();
 }
 
+
 // Função para imprimir uma mensagem várias vezes
 void MessageHandler::printMessage(const std::string& message, int count) {
     for (int i = 0; i < count; i++) {
