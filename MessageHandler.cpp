@@ -73,6 +73,7 @@ void MessageHandler::loadMessagesFromFile() {
     for (const auto& msg : messages) {
         std::cout << "- " << msg << std::endl;
     }
+
     std::cout << "Total de mensagens: " << messages.size() << std::endl;
 
 }
