@@ -11,6 +11,7 @@ public:
     void saveMessageToFile(const std::string& message);
     void loadMessagesFromFile();
     void clearMessages();
+    bool fileExists(const std::string& filename);
 
 private:
     std::vector<std::string> messages;

@@ -6,6 +6,11 @@
 #include <limits> // Para std::numeric_limits
 #include <string>
 
+bool MessageHandler::fileExists(const std::string& filename) {
+    std::ifstream file(filename);
+    return file.good();
+}
+
 // Função para imprimir uma mensagem várias vezes
 void MessageHandler::printMessage(const std::string& message, int count) {
     for (int i = 0; i < count; i++) {
@@ -36,6 +41,12 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 
 // Função para carregar mensagens de um arquivo
 void MessageHandler::loadMessagesFromFile() {
+
+    if (!fileExists("messages.txt")) {
+        std::cout << "Arquivo 'messages.txt' não encontrado!\n";
+        return;
+    }
+
     std::ifstream file("messages.txt");
     std::string line;
 
@@ -71,3 +82,4 @@ void MessageHandler::clearMessages() {
     messages.clear();
     std::cout << "Mensagens apagadas!" << std::endl;
 }
+
