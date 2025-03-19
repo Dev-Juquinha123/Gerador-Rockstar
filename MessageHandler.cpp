@@ -20,24 +20,21 @@ void MessageHandler::printMessage(const std::string& message, int count) {
 
 // Função para salvar uma mensagem em um arquivo
 void MessageHandler::saveMessageToFile(const std::string& message) {
-    std::ofstream file("messages.txt", std::ios::app);
-    if (file.is_open()) {
-        file << message << std::endl;
-        file.close();
-        std::cout << "\033[1;32mMensagem salva com sucesso!\033[0m" << std::endl;
-        if (message.empty()) {
-            std::cout << "A mensagem não pode estar vazia!" << std::endl;
-            return;
-        }
-        if (!file.is_open()) {
-            std::cerr << "Erro: Não foi possível abrir o arquivo para escrita!" << std::endl;
-        }
+    if (message.empty()) {
+        std::cout << "Erro: Mensagem vazia, não será salva.\n";
+        return;
+    }
 
+    std::ofstream file("messages.txt", std::ios::app);
+    if (!file) {
+        std::cerr << "Erro ao abrir arquivo para escrita.\n";
+        return;
     }
-    else {
-        std::cout << "Erro ao abrir o arquivo!" << std::endl;
-    }
+
+    file << message << std::endl;
+    std::cout << "Mensagem salva com sucesso!\n";
 }
+
 
 /// Função para carregar mensagens de um arquivo
 void MessageHandler::loadMessagesFromFile() {
