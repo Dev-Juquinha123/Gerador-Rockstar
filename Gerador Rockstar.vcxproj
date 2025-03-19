@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Jogo.cpp" />
-    <ClCompile Include="Colecao.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Jogo.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="MessageHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
