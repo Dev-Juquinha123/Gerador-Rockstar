@@ -21,6 +21,9 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
             std::cout << "A mensagem não pode estar vazia!" << std::endl;
             return;
         }
+        if (!file.is_open()) {
+            std::cerr << "Erro: Não foi possível abrir o arquivo para escrita!" << std::endl;
+        }
 
     }
     else {
