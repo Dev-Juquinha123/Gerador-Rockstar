@@ -7,6 +7,12 @@ int main() {
 
     char option;
 
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+
     std::cout << "\n=================== MENU ===================\n";
     do {
         std::cout << "\nOpções:\n";
@@ -16,8 +22,8 @@ int main() {
         std::cout << "4 - Apagar mensagens\n";
         std::cout << "0 - Sair\n";
         std::cout << "Escolha: ";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
+        std::cin >> option;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Limpa o buffer antes de usar getline()
 
         switch (option) {
         case '1': {

@@ -35,17 +35,27 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 void MessageHandler::loadMessagesFromFile() {
     std::ifstream file("messages.txt");
     std::string line;
-    if (file.is_open()) {
-        while (getline(file, line)) {
-            messages.push_back(line);
-        }
-        file.close();
-        std::cout << "Total de mensagens carregadas: " << messages.size() << std::endl;
+
+    if (!file.is_open()) {
+        std::cerr << "Erro: Não foi possível abrir 'messages.txt'. Verifique se o arquivo existe." << std::endl;
+        return;
     }
-    else {
-        std::cout << "Nenhum arquivo encontrado!" << std::endl;
+
+    if (file.peek() == std::ifstream::traits_type::eof()) {
+        std::cout << "O arquivo está vazio!" << std::endl;
+        return;
     }
+
+    messages.clear();  // Limpa mensagens antigas antes de carregar novas
+
+    while (std::getline(file, line)) {
+        messages.push_back(line);
+    }
+
+    file.close();
+    std::cout << "Total de mensagens carregadas: " << messages.size() << std::endl;
 }
+
 
 // Função para limpar todas as mensagens do arquivo
 void MessageHandler::clearMessages() {
