@@ -61,6 +61,7 @@ void MessageHandler::loadMessagesFromFile() {
         return;
     }
 
+
     messages.clear();  // Limpa mensagens antigas antes de carregar novas
 
     while (std::getline(file, line)) {
