@@ -1,4 +1,7 @@
 #include "MessageHandler.h"
+#include <chrono>
+#include <thread>
+
 
 // Função para imprimir uma mensagem várias vezes
 void MessageHandler::printMessage(const std::string& message, int count) {

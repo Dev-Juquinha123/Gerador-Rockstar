@@ -16,7 +16,8 @@ int main() {
         std::cout << "4 - Apagar mensagens\n";
         std::cout << "0 - Sair\n";
         std::cout << "Escolha: ";
-        std::cin >> option;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 
         switch (option) {
         case '1': {
