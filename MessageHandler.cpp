@@ -39,7 +39,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
     }
 }
 
-// Função para carregar mensagens de um arquivo
+/// Função para carregar mensagens de um arquivo
 void MessageHandler::loadMessagesFromFile() {
 
     if (!fileExists("messages.txt")) {
@@ -67,7 +67,12 @@ void MessageHandler::loadMessagesFromFile() {
     }
 
     file.close();
-    std::cout << "Total de mensagens carregadas: " << messages.size() << std::endl;
+    std::cout << "Mensagens carregadas: " << std::endl;
+    for (const auto& msg : messages) {
+        std::cout << "- " << msg << std::endl;
+    }
+    std::cout << "Total de mensagens: " << messages.size() << std::endl;
+
 }
 
 
