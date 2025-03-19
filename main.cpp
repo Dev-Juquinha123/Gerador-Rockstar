@@ -37,7 +37,7 @@ int main() {
             msgHandler.clearMessages();
             break;
         case '0':
-            std::cout << "Saindo...\n";
+            std::cout << "\nObrigado por usar o programa. Até mais!\n";
             break;
         default:
             std::cout << "Opção inválida!\n";
