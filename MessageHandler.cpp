@@ -16,7 +16,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
     if (file.is_open()) {
         file << message << std::endl;
         file.close();
-        std::cout << "Mensagem salva com sucesso!" << std::endl;
+        std::cout << "\033[1;32mMensagem salva com sucesso!\033[0m" << std::endl;
         if (message.empty()) {
             std::cout << "A mensagem não pode estar vazia!" << std::endl;
             return;
