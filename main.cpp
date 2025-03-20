@@ -1,5 +1,6 @@
 #include "MessageHandler.h"
 #include "InputHandler.h"
+#include <fstream>
 
 int main() {
     MessageHandler msgHandler;
@@ -16,6 +17,9 @@ int main() {
 
     std::cout << "\n=================== MENU ===================\n";
     do {
+        std::ofstream fout{ "passeio.txt" };
+        fout << "oi";
+        fout.close();
         std::cout << "\nOpções:\n";
         std::cout << "1 - Imprimir mensagem\n";
         std::cout << "2 - Salvar mensagem\n";
