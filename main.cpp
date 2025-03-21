@@ -36,6 +36,7 @@ int main() {
             int count = inputHandler.getUserCount();
             msgHandler.printMessage(message, count);
             break;
+
         }
         case '2': {
             std::string message = inputHandler.getUserMessage();
