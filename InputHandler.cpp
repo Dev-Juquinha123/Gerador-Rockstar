@@ -1,5 +1,9 @@
 #include "InputHandler.h"
 
+InputHandler::InputHandler()
+{
+}
+
 // Função para obter uma mensagem do usuário
 std::string InputHandler::getUserMessage() {
     std::string message;
