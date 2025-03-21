@@ -44,7 +44,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 void MessageHandler::loadMessagesFromFile() {
 
     if (!fileExists("messages.txt")) {
-        std::cout << "Arquivo 'messages.txt' não encontrado!\n";
+        std::cout << "Arquivo 'messages.txt' não encontrado\n";
         return;
     }
 
