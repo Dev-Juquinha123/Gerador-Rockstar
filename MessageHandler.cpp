@@ -32,7 +32,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
         std::cout << "Erro: Mensagem vazia, não será salva. \n";
         return;
     }
-
+    // new file for updates
     std::ofstream file("update.txt", std::ios::app);
     std::ofstream file("messages.txt", std::ios::app);
     if (!file) {
