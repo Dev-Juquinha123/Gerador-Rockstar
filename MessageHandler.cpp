@@ -14,6 +14,7 @@ bool MessageHandler::fileExists(const std::string& filename) {
 
 MessageHandler::MessageHandler()
 {
+    //Initialization
 }
 
 // Função para imprimir uma mensagem várias vezes
