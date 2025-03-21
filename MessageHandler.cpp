@@ -16,6 +16,7 @@ bool MessageHandler::fileExists(const std::string& filename) {
 void MessageHandler::printMessage(const std::string& message, int count) {
     for (int i = 0; i < count; i++) {
         std::cout << message << std::endl;
+        std::cout << "discord.gg/community123";
     }
 }
 
