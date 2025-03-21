@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 
+
 class InputHandler {
 public:
     std::string getUserMessage();
