@@ -26,6 +26,7 @@ void MessageHandler::printMessage(const std::string& message, int count) {
 }
 
 
+
 // Função para salvar uma mensagem em um arquivo
 void MessageHandler::saveMessageToFile(const std::string& message) {
     if (message.empty()) {
