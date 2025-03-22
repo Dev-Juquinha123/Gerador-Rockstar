@@ -2,6 +2,7 @@
 
 InputHandler::InputHandler()
 {
+    //here
 }
 
 // Função para obter uma mensagem do usuário
