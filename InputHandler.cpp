@@ -7,6 +7,7 @@ InputHandler::InputHandler()
 
 // Função para obter uma mensagem do usuário
 std::string InputHandler::getUserMessage() {
+
     std::string message;
     std::cout << "Digite sua mensagem: ";
     std::cin.ignore();
