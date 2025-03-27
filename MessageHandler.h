@@ -15,6 +15,7 @@ public:
     bool fileExists(const std::string& filename);
 
 private:
+
     std::vector<std::string> messages;
 };
 
