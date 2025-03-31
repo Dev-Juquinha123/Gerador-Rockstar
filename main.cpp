@@ -5,7 +5,6 @@
 int main() {
     MessageHandler msgHandler;
     InputHandler inputHandler;
-
     char option;
 
     #ifdef _WIN32
