@@ -33,6 +33,7 @@ int main() {
         case '1': {
 
             std::string message = inputHandler.getUserMessage();
+
             int count = inputHandler.getUserCount();
             msgHandler.printMessage(message, count);
             break;
