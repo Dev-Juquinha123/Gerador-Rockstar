@@ -11,6 +11,7 @@ public:
     InputHandler();
 
     std::string getUserMessage();
+
     int getUserCount();
 };
 
