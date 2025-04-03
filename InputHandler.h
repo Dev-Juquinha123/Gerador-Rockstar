@@ -8,6 +8,7 @@
 
 class InputHandler {
 public:
+
     InputHandler();
 
     std::string getUserMessage();
