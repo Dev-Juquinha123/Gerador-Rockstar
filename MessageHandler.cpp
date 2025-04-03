@@ -54,6 +54,7 @@ void MessageHandler::loadMessagesFromFile() {
         std::cout << "Arquivo 'messages.txt' não encontrado\n";
         std::cout << "Tente novamente.\n";
         return;
+
     }
 
     std::ifstream file("messages.txt");
