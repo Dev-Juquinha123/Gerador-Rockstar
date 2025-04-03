@@ -44,6 +44,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 
     file << message << std::endl;
     std::cout << "Mensagem salva com sucesso!\n";
+
 }
 
 
