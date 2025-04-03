@@ -78,6 +78,7 @@ void MessageHandler::loadMessagesFromFile() {
 
     while (std::getline(file, line)) {
         messages.push_back(line);
+
     }
 
     file.close();
