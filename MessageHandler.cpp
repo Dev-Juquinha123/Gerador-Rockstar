@@ -63,6 +63,7 @@ void MessageHandler::loadMessagesFromFile() {
 
     if (!file.is_open()) {
         std::cerr << "Erro: Não foi possível abrir 'messages.txt'. Verifique se o arquivo existe." << std::endl;
+
         return;
     }
 
