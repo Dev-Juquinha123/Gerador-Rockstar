@@ -9,6 +9,7 @@
 class InputHandler {
 public:
     InputHandler();
+
     std::string getUserMessage();
     int getUserCount();
 };
