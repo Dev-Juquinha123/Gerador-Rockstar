@@ -21,6 +21,7 @@ public:
 private:
 
     std::vector<std::string> messages;
+
 };
 
 #endif
