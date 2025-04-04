@@ -61,6 +61,7 @@ void MessageHandler::loadMessagesFromFile() {
     }
 
     std::ifstream file("messages.txt");
+
     std::string line;
 
 
