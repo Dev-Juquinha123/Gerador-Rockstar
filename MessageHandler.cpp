@@ -73,6 +73,7 @@ void MessageHandler::loadMessagesFromFile() {
 
 
     if (file.peek() == std::ifstream::traits_type::eof()) {
+
         std::cout << "O arquivo está vazio!" << std::endl;
 
         return;
