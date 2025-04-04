@@ -92,6 +92,7 @@ void MessageHandler::loadMessagesFromFile() {
     std::cout << "Mensagens carregadas: " << std::endl;
 
     for (const auto& msg : messages) {
+
         std::cout << "- " << msg << std::endl;
     }
 
