@@ -107,6 +107,8 @@ void MessageHandler::clearMessages() {
     char confirm;
     std::cout << "Tem certeza que deseja apagar todas as mensagens? (s/n): ";
     std::cin >> confirm;
+
+
     if (confirm != 's' && confirm != 'S') return;
 
     std::ofstream file("messages.txt", std::ofstream::trunc);
