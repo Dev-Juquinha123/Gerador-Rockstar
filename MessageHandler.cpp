@@ -50,15 +50,6 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 
 /// Função para carregar mensagens de um arquivo
 void MessageHandler::loadMessagesFromFile() {
-    // Erro handler
-    if (!fileExists("messages.txt")) {
-        std::cout << "Arquivo 'messages.txt' não encontrado\n";
-
-        std::cout << "Tente novamente.\n";
-
-        return;
-
-    }
 
     std::ifstream file("messages.txt");
 
