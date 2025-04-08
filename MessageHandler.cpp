@@ -51,6 +51,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 /// Função para carregar mensagens de um arquivo
 void MessageHandler::loadMessagesFromFile() {
 
+
     std::ifstream file("messages.txt");
 
     std::string line;
