@@ -6,6 +6,7 @@
 #include <limits> // Para std::numeric_limits
 #include <string>
 
+
 bool MessageHandler::fileExists(const std::string& filename) {
     std::ifstream file(filename);
     return file.good();
