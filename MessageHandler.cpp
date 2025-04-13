@@ -60,6 +60,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
 
     std::cout << "Mensagem salva com sucesso!\n";
 
+
 }
 
 
