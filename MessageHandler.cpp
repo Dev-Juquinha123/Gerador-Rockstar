@@ -51,6 +51,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
     if (!file) {
 
         std::cerr << "[Erro] ao abrir arquivo para escrita.\n";
+
         return;
     }
 
