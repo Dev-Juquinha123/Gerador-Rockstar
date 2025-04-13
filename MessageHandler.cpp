@@ -46,6 +46,7 @@ void MessageHandler::saveMessageToFile(const std::string& message) {
     }
     // new file for updates
     std::ofstream file("update.txt", std::ios::app);
+
     std::ofstream file("messages.txt", std::ios::app);
     if (!file) {
         std::cerr << "[Erro] ao abrir arquivo para escrita.\n";
