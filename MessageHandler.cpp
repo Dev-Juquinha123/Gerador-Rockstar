@@ -39,7 +39,9 @@ void MessageHandler::printMessage(const std::string& message, int count) {
 // Função para salvar uma mensagem em um arquivo
 void MessageHandler::saveMessageToFile(const std::string& message) {
     if (message.empty()) {
+
         std::cout << "Erro: Mensagem vazia, não será salva. \n";
+
         return;
     }
     // new file for updates
