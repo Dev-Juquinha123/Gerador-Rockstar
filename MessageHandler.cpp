@@ -123,6 +123,7 @@ void MessageHandler::clearMessages() {
     if (confirm != 's' && confirm != 'S') return;
 
     std::ofstream file("messages.txt", std::ofstream::trunc);
+
     file.close();
     messages.clear();
     std::cout << "Mensagens apagadas!" << std::endl;
