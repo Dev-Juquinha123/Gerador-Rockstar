@@ -16,6 +16,7 @@ std::string InputHandler::getUserMessage() {
 
     std::getline(std::cin, message);
 
+
     return message;
 }
 
