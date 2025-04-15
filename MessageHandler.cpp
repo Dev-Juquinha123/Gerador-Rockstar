@@ -127,6 +127,7 @@ void MessageHandler::clearMessages() {
     file.close();
 
     messages.clear();
+
     std::cout << "Mensagens apagadas!" << std::endl;
 
 
