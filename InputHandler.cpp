@@ -31,6 +31,7 @@ int InputHandler::getUserCount() {
     if (count < 1) {
 
         std::cout << "Número inválido! Usando 1 por padrão." << std::endl;
+
         count = 1;
     }
 
