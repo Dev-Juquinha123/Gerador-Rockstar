@@ -40,6 +40,7 @@ int main() {
             int count = inputHandler.getUserCount();
 
             msgHandler.printMessage(message, count);
+
             break;
 
         }
