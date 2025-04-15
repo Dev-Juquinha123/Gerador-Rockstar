@@ -11,6 +11,7 @@ std::string InputHandler::getUserMessage() {
     std::string message;
 
     std::cout << "Digite sua mensagem: ";
+
     std::cin.ignore();
     std::getline(std::cin, message);
 
