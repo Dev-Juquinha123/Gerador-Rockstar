@@ -25,6 +25,7 @@ int InputHandler::getUserCount() {
     int count;
 
     std::cout << "Quantas vezes deseja repetir?: ";
+
     std::cin >> count;
 
     if (count < 1) {
