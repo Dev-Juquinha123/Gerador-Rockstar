@@ -32,6 +32,7 @@ int main() {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Limpa o buffer antes de usar getline()
 
         switch (option) {
+
         case '1': {
 
             std::string message = inputHandler.getUserMessage();
