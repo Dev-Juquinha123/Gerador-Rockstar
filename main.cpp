@@ -49,6 +49,7 @@ int main() {
             std::string message = inputHandler.getUserMessage();
 
             msgHandler.saveMessageToFile(message);
+
             break;
         }
         case '3':
