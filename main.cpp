@@ -58,6 +58,7 @@ int main() {
             break;
         case '4':
             msgHandler.clearMessages();
+
             break;
         case '0':
             std::cout << "\nObrigado por usar o programa. Até mais!\n";
