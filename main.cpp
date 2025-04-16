@@ -54,6 +54,7 @@ int main() {
         }
         case '3':
             msgHandler.loadMessagesFromFile();
+
             break;
         case '4':
             msgHandler.clearMessages();
