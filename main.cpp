@@ -47,6 +47,7 @@ int main() {
         case '2': {
 
             std::string message = inputHandler.getUserMessage();
+
             msgHandler.saveMessageToFile(message);
             break;
         }
