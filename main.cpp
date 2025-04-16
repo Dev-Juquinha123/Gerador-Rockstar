@@ -28,6 +28,7 @@ int main() {
         std::cout << "0 - Sair\n";
         std::cout << "Escolha: ";
 
+
         std::cin >> option;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Limpa o buffer antes de usar getline()
 
