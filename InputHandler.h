@@ -29,8 +29,5 @@ vehicles::vehicles()
 {
 }
 
-vehicles::~vehicles()
-{
-}
 
 #endif
