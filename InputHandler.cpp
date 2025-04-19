@@ -38,5 +38,6 @@ int InputHandler::getUserCount() {
         count = 1;
     }
 
+
     return count;
 }
