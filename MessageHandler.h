@@ -26,4 +26,22 @@ private:
 
 };
 
+class Vehicle
+{
+public:
+    Vehicle();
+	~Vehicle();
+
+private:
+
+};
+
+Vehicle::Vehicle()
+{
+}
+
+Vehicle::~Vehicle()
+{
+}
+
 #endif

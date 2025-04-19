@@ -68,6 +68,7 @@ int main() {
         default:
             std::cout << "Opção inválida!\n";
             std::cout << "Try again...";
+
         }
     } while (option != '0');
 
