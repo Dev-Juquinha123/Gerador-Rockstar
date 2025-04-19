@@ -32,6 +32,7 @@ public:
     Vehicle();
 
 	~Vehicle();
+
     int vehs = 0;
 private:
     // here
