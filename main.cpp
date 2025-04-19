@@ -12,7 +12,7 @@ int main() {
     #else
         system("clear");
     #endif
-
+        int* smtrs = NULL;
 
     std::cout << "\n=================== MENU ===================\n";
     do {
