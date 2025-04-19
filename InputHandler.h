@@ -15,5 +15,22 @@ public:
 
     int getUserCount();
 };
+class vehicles
+{
+public:
+	vehicles();
+	~vehicles();
+
+private:
+
+};
+
+vehicles::vehicles()
+{
+}
+
+vehicles::~vehicles()
+{
+}
 
 #endif
