@@ -30,6 +30,7 @@ class Vehicle
 {
 public:
     Vehicle();
+
 	~Vehicle();
 
 private:
