@@ -23,6 +23,7 @@ std::string InputHandler::getUserMessage() {
 // Função para obter a quantidade de repetições
 int InputHandler::getUserCount() {
 
+
     int count;
 
     std::cout << "Quantas vezes deseja repetir?: ";
