@@ -47,4 +47,22 @@ Vehicle::~Vehicle()
 {
 }
 
+class vector3d
+{
+public:
+	vector3d();
+	~vector3d();
+
+private:
+
+};
+
+vector3d::vector3d()
+{
+}
+
+vector3d::~vector3d()
+{
+}
+
 #endif
