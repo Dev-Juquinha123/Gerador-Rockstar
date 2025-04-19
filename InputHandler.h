@@ -19,7 +19,6 @@ class vehicles
 {
 public:
 	vehicles();
-	~vehicles();
 
 private:
 
