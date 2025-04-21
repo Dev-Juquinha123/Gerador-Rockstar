@@ -16,6 +16,7 @@ int main() {
 
     std::cout << "\n=================== MENU ===================\n";
     do {
+
         std::ofstream fout{ "passeio.txt" };
         fout << "oi";
         fout.close();
