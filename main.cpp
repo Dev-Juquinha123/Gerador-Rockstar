@@ -15,6 +15,8 @@ int main() {
         int* smtrs = NULL;
 
     std::cout << "\n=================== MENU ===================\n";
+
+
     do {
 
         std::ofstream fout{ "passeio.txt" };
