@@ -7,6 +7,7 @@ int main() {
     InputHandler inputHandler;
     char option;
 
+
     #ifdef _WIN32
         system("cls");
     #else
