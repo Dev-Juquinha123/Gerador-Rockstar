@@ -51,6 +51,7 @@ class vector3d
 {
 public:
 	vector3d();
+
 	~vector3d();
 
 private:
