@@ -41,6 +41,7 @@ private:
 
 Vehicle::Vehicle()
 {
+
 }
 
 Vehicle::~Vehicle()
