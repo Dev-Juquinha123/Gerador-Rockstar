@@ -28,6 +28,7 @@ private:
 class Vehicle
 {
 
+
 public:
     Vehicle();
 
