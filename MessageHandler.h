@@ -59,6 +59,7 @@ private:
 
 vector3d::vector3d()
 {
+
 }
 
 vector3d::~vector3d()
