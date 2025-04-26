@@ -63,6 +63,7 @@ vector3d::vector3d()
 
 vector3d::~vector3d()
 {
+
 }
 
 #endif
