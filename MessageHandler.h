@@ -17,7 +17,6 @@ public:
 
     void clearMessages();
 
-
     bool fileExists(const std::string& filename);
 
 
