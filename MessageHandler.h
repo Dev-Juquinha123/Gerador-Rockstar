@@ -51,7 +51,7 @@ Vehicle::Vehicle()
 
 Vehicle::~Vehicle()
 {
-
+    // describe
 }
 
 class vector3d
