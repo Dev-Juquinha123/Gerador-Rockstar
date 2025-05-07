@@ -72,7 +72,7 @@ vector3d::vector3d()
 
 vector3d::~vector3d()
 {
-
+    // vx3p.asi
 }
 
 #endif
