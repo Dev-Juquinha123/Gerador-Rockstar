@@ -72,7 +72,7 @@ vector3d::vector3d()
 
 vector3d::~vector3d()
 {
-    // vx3p.asi 3.0.0.1 soon
+    // vx3p.asi 3.0.0.1 soon.
 }
 
 #endif
